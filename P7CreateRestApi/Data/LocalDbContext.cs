@@ -2,10 +2,12 @@ using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Domain;
 using Dot.Net.WebApi.Controllers.Domain;
 using Dot.Net.WebApi.Controllers;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Dot.Net.WebApi.Data
 {
-    public class LocalDbContext : DbContext
+    public class LocalDbContext : IdentityDbContext
     {
         public LocalDbContext(DbContextOptions<LocalDbContext> options) : base(options) { }
         public DbSet<BidList> Bids { get; set; }
