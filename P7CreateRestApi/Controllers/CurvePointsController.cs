@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Data;
 using Dot.Net.WebApi.Domain;
+using Microsoft.AspNetCore.Authorization;
 
 namespace P7CreateRestApi.Controllers
 {
@@ -23,6 +24,7 @@ namespace P7CreateRestApi.Controllers
 
         // GET: api/CurvePoints
         [HttpGet]
+        [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<IEnumerable<CurvePoint>>> GetCurvePoints()
         {
             return await _context.CurvePoints.ToListAsync();
@@ -30,6 +32,7 @@ namespace P7CreateRestApi.Controllers
 
         // GET: api/CurvePoints/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<CurvePoint>> GetCurvePoint(int id)
         {
             var curvePoint = await _context.CurvePoints.FindAsync(id);
@@ -45,6 +48,7 @@ namespace P7CreateRestApi.Controllers
         // PUT: api/CurvePoints/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin, Technician")]
         public async Task<IActionResult> PutCurvePoint(int id, CurvePoint curvePoint)
         {
             if (id != curvePoint.Id)
@@ -76,6 +80,7 @@ namespace P7CreateRestApi.Controllers
         // POST: api/CurvePoints
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Admin, Technician")]
         public async Task<ActionResult<CurvePoint>> PostCurvePoint(CurvePoint curvePoint)
         {
             _context.CurvePoints.Add(curvePoint);
@@ -86,6 +91,7 @@ namespace P7CreateRestApi.Controllers
 
         // DELETE: api/CurvePoints/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteCurvePoint(int id)
         {
             var curvePoint = await _context.CurvePoints.FindAsync(id);

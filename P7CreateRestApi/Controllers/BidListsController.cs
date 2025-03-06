@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Data;
 using Dot.Net.WebApi.Domain;
+using Microsoft.AspNetCore.Authorization;
 
 namespace P7CreateRestApi.Controllers
 {
@@ -23,6 +24,7 @@ namespace P7CreateRestApi.Controllers
 
         // GET: api/BidLists
         [HttpGet]
+        [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<IEnumerable<BidList>>> GetBids()
         {
             return await _context.Bids.ToListAsync();
@@ -30,6 +32,7 @@ namespace P7CreateRestApi.Controllers
 
         // GET: api/BidLists/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<BidList>> GetBidList(int id)
         {
             var bidList = await _context.Bids.FindAsync(id);
@@ -45,6 +48,7 @@ namespace P7CreateRestApi.Controllers
         // PUT: api/BidLists/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin, Technician")]
         public async Task<IActionResult> PutBidList(int id, BidList bidList)
         {
             if (id != bidList.BidListId)
@@ -76,6 +80,7 @@ namespace P7CreateRestApi.Controllers
         // POST: api/BidLists
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Admin, Technician")]
         public async Task<ActionResult<BidList>> PostBidList(BidList bidList)
         {
             _context.Bids.Add(bidList);
@@ -86,6 +91,7 @@ namespace P7CreateRestApi.Controllers
 
         // DELETE: api/BidLists/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteBidList(int id)
         {
             var bidList = await _context.Bids.FindAsync(id);
@@ -99,6 +105,7 @@ namespace P7CreateRestApi.Controllers
 
             return NoContent();
         }
+
 
         private bool BidListExists(int id)
         {
