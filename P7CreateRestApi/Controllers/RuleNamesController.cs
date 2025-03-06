@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Controllers;
 using Dot.Net.WebApi.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace P7CreateRestApi.Controllers
 {
@@ -23,6 +24,7 @@ namespace P7CreateRestApi.Controllers
 
         // GET: api/RuleNames
         [HttpGet]
+        [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<IEnumerable<RuleName>>> GetRules()
         {
             return await _context.Rules.ToListAsync();
@@ -30,6 +32,7 @@ namespace P7CreateRestApi.Controllers
 
         // GET: api/RuleNames/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<RuleName>> GetRuleName(int id)
         {
             var ruleName = await _context.Rules.FindAsync(id);
@@ -45,6 +48,7 @@ namespace P7CreateRestApi.Controllers
         // PUT: api/RuleNames/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin, Technician")]
         public async Task<IActionResult> PutRuleName(int id, RuleName ruleName)
         {
             if (id != ruleName.Id)
@@ -86,6 +90,7 @@ namespace P7CreateRestApi.Controllers
 
         // DELETE: api/RuleNames/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteRuleName(int id)
         {
             var ruleName = await _context.Rules.FindAsync(id);
