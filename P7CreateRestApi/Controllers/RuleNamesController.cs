@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Controllers;
 using Dot.Net.WebApi.Data;
 using Microsoft.AspNetCore.Authorization;
+using P7CreateRestApi.Repositories;
 
 namespace P7CreateRestApi.Controllers
 {
@@ -15,11 +16,11 @@ namespace P7CreateRestApi.Controllers
     [ApiController]
     public class RuleNamesController : ControllerBase
     {
-        private readonly LocalDbContext _context;
+        private readonly IRuleNamesRepository _repository;
 
-        public RuleNamesController(LocalDbContext context)
+        public RuleNamesController(IRuleNamesRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/RuleNames
@@ -27,7 +28,14 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<IEnumerable<RuleName>>> GetRules()
         {
-            return await _context.Rules.ToListAsync();
+            var rules = await _repository.GetAllRuleNamesAsync();
+
+            if (rules == null || !rules.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(rules);
         }
 
         // GET: api/RuleNames/5
@@ -35,57 +43,62 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<RuleName>> GetRuleName(int id)
         {
-            var ruleName = await _context.Rules.FindAsync(id);
+            var ruleName = await _repository.GetRuleNameByIdAsync(id);
 
             if (ruleName == null)
             {
                 return NotFound();
             }
 
-            return ruleName;
+            return Ok(ruleName);
         }
 
         // PUT: api/RuleNames/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin, Technician")]
-        public async Task<IActionResult> PutRuleName(int id, RuleName ruleName)
+        public async Task<IActionResult> PutRuleName(int id, RuleName ruleNameDTO)
         {
-            if (id != ruleName.Id)
+            var existingRule = await _repository.GetRuleNameByIdAsync(id);
+
+            if (existingRule == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _context.Entry(ruleName).State = EntityState.Modified;
+            existingRule.Username = ruleNameDTO.Username;
+            existingRule.Description = ruleNameDTO.Description;
+            existingRule.JSon = ruleNameDTO.JSon;
+            existingRule.Template = ruleNameDTO.Template;
+            existingRule.SqlStr = ruleNameDTO.SqlStr;
+            existingRule.SqlPart = ruleNameDTO.SqlPart;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!RuleNameExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
+            await _repository.UpdateRuleNameAsync(existingRule);
             return NoContent();
         }
 
         // POST: api/RuleNames
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<RuleName>> PostRuleName(RuleName ruleName)
+        public async Task<ActionResult<RuleName>> PostRuleName(RuleName ruleNameDTO)
         {
-            _context.Rules.Add(ruleName);
-            await _context.SaveChangesAsync();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var ruleName = new RuleName
+            {
+                Username = ruleNameDTO.Username,
+                Description = ruleNameDTO.Description,
+                JSon = ruleNameDTO.JSon,
+                Template = ruleNameDTO.Template,
+                SqlStr = ruleNameDTO.SqlStr,
+                SqlPart = ruleNameDTO.SqlPart
+            };
 
-            return CreatedAtAction("GetRuleName", new { id = ruleName.Id }, ruleName);
+            var createdRule = await _repository.CreateRuleNameAsync(ruleName);
+
+            return CreatedAtAction("GetRuleName", new { id = createdRule.Id }, createdRule);
         }
 
         // DELETE: api/RuleNames/5
@@ -93,21 +106,16 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteRuleName(int id)
         {
-            var ruleName = await _context.Rules.FindAsync(id);
+            var ruleName = await _repository.GetRuleNameByIdAsync(id);
+
             if (ruleName == null)
             {
                 return NotFound();
             }
 
-            _context.Rules.Remove(ruleName);
-            await _context.SaveChangesAsync();
+            await _repository.DeleteRuleNameAsync(id);
 
             return NoContent();
-        }
-
-        private bool RuleNameExists(int id)
-        {
-            return _context.Rules.Any(e => e.Id == id);
         }
     }
 }
