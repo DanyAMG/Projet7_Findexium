@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
 namespace Dot.Net.WebApi.Domain
 {
     public class Trade
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TradeId { get; set; }
         public string Account { get; set; }
         public string AccountType { get; set; }
@@ -9,7 +14,7 @@ namespace Dot.Net.WebApi.Domain
         public double? SellQuantity { get; set; }
         public double? BuyPrice { get; set; }
         public double? SellPrice { get; set; }
-        public double? TradeDate { get; set; }
+        public DateTime? TradeDate { get; set; }
         public string TradeSecurity { get; set; }
         public string TradeStatus { get; set; }
         public string Trader { get; set; }

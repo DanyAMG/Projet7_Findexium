@@ -8,6 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Dot.Net.WebApi.Data;
 using Dot.Net.WebApi.Domain;
 using Microsoft.AspNetCore.Authorization;
+using P7CreateRestApi.Repositories;
+using P7CreateRestApi.Model;
+using System.Collections;
 
 namespace P7CreateRestApi.Controllers
 {
@@ -15,11 +18,11 @@ namespace P7CreateRestApi.Controllers
     [ApiController]
     public class CurvePointsController : ControllerBase
     {
-        private readonly LocalDbContext _context;
+        private readonly ICurvePointsRepository _repository;
 
-        public CurvePointsController(LocalDbContext context)
+        public CurvePointsController(ICurvePointsRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/CurvePoints
@@ -27,7 +30,14 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<IEnumerable<CurvePoint>>> GetCurvePoints()
         {
-            return await _context.CurvePoints.ToListAsync();
+            var curve = await _repository.GetAllCurvePointAsync();
+
+            if (curve == null || !curve.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(curve);
         }
 
         // GET: api/CurvePoints/5
@@ -35,44 +45,34 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<CurvePoint>> GetCurvePoint(int id)
         {
-            var curvePoint = await _context.CurvePoints.FindAsync(id);
+            var curvePoint = await _repository.GetCurvePointByIdAsync(id);
 
             if (curvePoint == null)
             {
                 return NotFound();
             }
 
-            return curvePoint;
+            return Ok(curvePoint);
         }
 
         // PUT: api/CurvePoints/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin, Technician")]
-        public async Task<IActionResult> PutCurvePoint(int id, CurvePoint curvePoint)
+        public async Task<IActionResult> PutCurvePoint(int id, CurvePointDTO curvePointDTO)
         {
-            if (id != curvePoint.Id)
+            var existingCurvePoint = await _repository.GetCurvePointByIdAsync(id);
+
+            if (existingCurvePoint == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _context.Entry(curvePoint).State = EntityState.Modified;
+            existingCurvePoint.CurveId = curvePointDTO.CurveId;
+            existingCurvePoint.AsOfDate = curvePointDTO.AsOfDate;
+            existingCurvePoint.CurvePointValue = curvePointDTO.CurvePointValue;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CurvePointExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _repository.UpdateCurvePointAsync(existingCurvePoint);
 
             return NoContent();
         }
@@ -81,12 +81,22 @@ namespace P7CreateRestApi.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize(Roles = "Admin, Technician")]
-        public async Task<ActionResult<CurvePoint>> PostCurvePoint(CurvePoint curvePoint)
+        public async Task<ActionResult<CurvePoint>> PostCurvePoint(CurvePointDTO curvePointDTO)
         {
-            _context.CurvePoints.Add(curvePoint);
-            await _context.SaveChangesAsync();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-            return CreatedAtAction("GetCurvePoint", new { id = curvePoint.Id }, curvePoint);
+            var curvePoint = new CurvePoint
+            {
+                CurveId = curvePointDTO.CurveId,
+                AsOfDate = curvePointDTO.AsOfDate,
+                CurvePointValue = curvePointDTO.CurvePointValue
+            };
+
+            var createdCurvePoint = await _repository.CreateCurvePointAsync(curvePoint);
+            return CreatedAtAction("GetCurvePoint", new { id = createdCurvePoint.Id }, createdCurvePoint);
         }
 
         // DELETE: api/CurvePoints/5
@@ -94,21 +104,16 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteCurvePoint(int id)
         {
-            var curvePoint = await _context.CurvePoints.FindAsync(id);
+            var curvePoint = await _repository.GetCurvePointByIdAsync(id);
+
             if (curvePoint == null)
             {
                 return NotFound();
             }
 
-            _context.CurvePoints.Remove(curvePoint);
-            await _context.SaveChangesAsync();
+            await _repository.DeleteCurvePointAsync(id);
 
             return NoContent();
-        }
-
-        private bool CurvePointExists(int id)
-        {
-            return _context.CurvePoints.Any(e => e.Id == id);
         }
     }
 }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Dot.Net.WebApi.Data;
+﻿using Microsoft.AspNetCore.Mvc;
 using Dot.Net.WebApi.Domain;
 using Microsoft.AspNetCore.Authorization;
+using P7CreateRestApi.Repositories;
+using P7CreateRestApi.Model;
 
 namespace P7CreateRestApi.Controllers
 {
@@ -15,11 +10,11 @@ namespace P7CreateRestApi.Controllers
     [ApiController]
     public class BidListsController : ControllerBase
     {
-        private readonly LocalDbContext _context;
+        private readonly IBidListRepository _repository;
 
-        public BidListsController(LocalDbContext context)
+        public BidListsController(IBidListRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/BidLists
@@ -27,7 +22,14 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<IEnumerable<BidList>>> GetBids()
         {
-            return await _context.Bids.ToListAsync();
+            var bids = await _repository.GetAllBidsAsync();
+
+            if (bids == null || !bids.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(bids);
         }
 
         // GET: api/BidLists/5
@@ -35,44 +37,34 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin, Technician, Visitor")]
         public async Task<ActionResult<BidList>> GetBidList(int id)
         {
-            var bidList = await _context.Bids.FindAsync(id);
+            var bidList = await _repository.GetBidListByIdAsync(id);
 
             if (bidList == null)
             {
                 return NotFound();
             }
 
-            return bidList;
+            return Ok(bidList);
         }
 
         // PUT: api/BidLists/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin, Technician")]
-        public async Task<IActionResult> PutBidList(int id, BidList bidList)
+        public async Task<IActionResult> PutBidList(int id, BidListDTO bidListDTO)
         {
-            if (id != bidList.BidListId)
+            var existingBidList = await _repository.GetBidListByIdAsync(id);
+
+            if (existingBidList == null)
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            _context.Entry(bidList).State = EntityState.Modified;
+            existingBidList.Account = bidListDTO.Account;
+            existingBidList.BidType = bidListDTO.BidType;
+            existingBidList.BidQuantity = bidListDTO.BidQuantity;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!BidListExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _repository.UpdateBidListAsync(existingBidList);
 
             return NoContent();
         }
@@ -81,12 +73,20 @@ namespace P7CreateRestApi.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Authorize(Roles = "Admin, Technician")]
-        public async Task<ActionResult<BidList>> PostBidList(BidList bidList)
+        public async Task<ActionResult<BidList>> PostBidList(BidListDTO bidListDTO)
         {
-            _context.Bids.Add(bidList);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetBidList", new { id = bidList.BidListId }, bidList);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var bidList = new BidList
+            {
+                Account = bidListDTO.Account,
+                BidType = bidListDTO.BidType,
+                BidQuantity = bidListDTO.BidQuantity,
+            };
+            var createdBidList = await _repository.CreateBidListAsync(bidList);
+            return CreatedAtAction("GetBidList", new { id = createdBidList.BidListId }, createdBidList);
         }
 
         // DELETE: api/BidLists/5
@@ -94,22 +94,15 @@ namespace P7CreateRestApi.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteBidList(int id)
         {
-            var bidList = await _context.Bids.FindAsync(id);
+            var bidList = await _repository.GetBidListByIdAsync(id);
+
             if (bidList == null)
             {
                 return NotFound();
             }
 
-            _context.Bids.Remove(bidList);
-            await _context.SaveChangesAsync();
-
+            await _repository.DeleteBidListAsync(id);
             return NoContent();
-        }
-
-
-        private bool BidListExists(int id)
-        {
-            return _context.Bids.Any(e => e.BidListId == id);
         }
     }
 }
