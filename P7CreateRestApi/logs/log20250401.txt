@@ -1,0 +1,1550 @@
+2025-04-01 00:55:22.937 +02:00 [INF] User profile is available. Using 'C:\Users\Dany\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-01 00:55:23.201 +02:00 [INF] Now listening on: https://localhost:7210
+2025-04-01 00:55:23.202 +02:00 [INF] Now listening on: http://localhost:5267
+2025-04-01 00:55:23.241 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-01 00:55:23.242 +02:00 [INF] Hosting environment: Development
+2025-04-01 00:55:23.242 +02:00 [INF] Content root path: C:\Users\Dany\source\repos\Projet 7 - Back-end.NET_API_REST-main\P7CreateRestApi
+2025-04-01 00:55:27.456 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-04-01 00:55:27.646 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.html
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: text/html;charset=utf-8
+ResponseBody: <!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+       
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+
+    <script src="./swagger-ui-bundle.js" charset="utf-8"></script>
+    <script src="./swagger-ui-standalone-preset.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
+
+Duration: 84,7266
+2025-04-01 00:55:27.647 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 194.5127ms
+2025-04-01 00:55:27.651 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui.css - null null
+2025-04-01 00:55:27.651 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.css - null null
+2025-04-01 00:55:27.651 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-01 00:55:27.652 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui-bundle.js - null null
+2025-04-01 00:55:27.655 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui-standalone-preset.js - null null
+2025-04-01 00:55:27.710 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2025-04-01 00:55:27.802 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.js
+Accept: */*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: application/javascript;charset=utf-8
+ResponseBody: /* Source: https://gist.github.com/lamberta/3768814
+ * Parse a string function definition and return a function object. Does not use eval.
+ * @param {string} str
+ * @return {function}
+ *
+ * Example:
+ *  var f = function (x, y) { return x * y; };
+ *  var g = parseFunction(f.toString());
+ *  g(33, 3); //=> 99
+ */
+function parseFunction(str) {
+    if (!str) return void (0);
+
+    var fn_body_idx = str.indexOf('{'),
+        fn_body = str.substring(fn_body_idx + 1, str.lastIndexOf('}')),
+        fn_declare = str.substring(0, fn_body_idx),
+        fn_params = fn_declare.substring(fn_declare.indexOf('(') + 1, fn_declare.lastIndexOf(')')),
+        args = fn_params.split(',');
+
+    args.push(fn_body);
+
+    function Fn() {
+        return Function.apply(this, args);
+    }
+    Fn.prototype = Function.prototype;
+
+    return new Fn();
+}
+
+window.onload = function () {
+    var configObject = JSON.parse('{"urls":[{"url":"v1/swagger.json","name":"P7CreateRestApi v1"}],"deepLinking":false,"persistAuthorization":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"tryItOutEnabled":false}');
+    var oauthConfigObject = JSON.parse('{"scopeSeparator":" ","scopes":[],"useBasicAuthenticationWithAccessCodeGrant":false,"usePkceWithAuthorizationCodeGrant":false}');
+
+    // Workaround for https://github.com/swagger-api/swagger-ui/issues/5945
+    configObject.urls.forEach(function (item) {
+        if (item.url.startsWith("http") || item.url.startsWith("/")) return;
+        item.url = window.location.href.replace("index.html", item.url).split('#')[0];
+    });
+
+    // If validatorUrl is not explicitly provided, disable the feature by setting to null
+    if (!configObject.hasOwnProperty("validatorUrl"))
+        configObject.validatorUrl = null
+
+    // If oauth2RedirectUrl isn't specified, use the built-in default
+    if (!configObject.hasOwnProperty("oauth2RedirectUrl"))
+        configObject.oauth2RedirectUrl = (new URL("oauth2-redirect.html", window.location.href)).href;
+
+    // Apply mandatory parameters
+    configObject.dom_id = "#swagger-ui";
+    configObject.presets = [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset];
+    configObject.layout = "StandaloneLayout";
+
+    // Parse and add interceptor functions
+    var interceptors = JSON.parse('{}');
+    if (interceptors.RequestInterceptorFunction)
+        configObject.requestInterceptor = parseFunction(interceptors.RequestInterceptorFunction);
+    if (interceptors.ResponseInterceptorFunction)
+        configObject.responseInterceptor = parseFunction(interceptors.ResponseInterceptorFunction);
+
+    if (configObject.plugins) {
+        configObject.plugins = configObject.plugins.map(eval);
+    }
+    
+    // Begin Swagger UI call region
+
+    const ui = SwaggerUIBundle(configObject);
+
+    ui.initOAuth(oauthConfigObject);
+
+    // End Swagger UI call region
+
+    window.ui = ui
+}
+
+Duration: 64,2056
+2025-04-01 00:55:27.805 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-04-01 00:55:27.805 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 94.6589ms
+2025-04-01 00:55:27.838 +02:00 [INF] The file /swagger-ui-standalone-preset.js was not modified
+2025-04-01 00:55:27.838 +02:00 [INF] The file /swagger-ui-bundle.js was not modified
+2025-04-01 00:55:27.838 +02:00 [INF] The file /swagger-ui.css was not modified
+2025-04-01 00:55:27.838 +02:00 [INF] The file /index.css was not modified
+2025-04-01 00:55:27.838 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+If-Modified-Since: [Redacted]
+If-None-Match: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 304
+Content-Type: text/css
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Duration: 184,1766
+2025-04-01 00:55:27.838 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/swagger-ui-standalone-preset.js
+Accept: */*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+If-Modified-Since: [Redacted]
+If-None-Match: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 304
+Content-Type: text/javascript
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Duration: 128,1787
+2025-04-01 00:55:27.838 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/swagger-ui.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+If-Modified-Since: [Redacted]
+If-None-Match: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 304
+Content-Type: text/css
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Duration: 184,1787
+2025-04-01 00:55:27.838 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.css - 304 null text/css 186.9745ms
+2025-04-01 00:55:27.838 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/swagger-ui-bundle.js
+Accept: */*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+If-Modified-Since: [Redacted]
+If-None-Match: [Redacted]
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 304
+Content-Type: text/javascript
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Duration: 184,1767
+2025-04-01 00:55:27.838 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui-standalone-preset.js - 304 null text/javascript 183.2232ms
+2025-04-01 00:55:27.839 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui-bundle.js - 304 null text/javascript 186.8897ms
+2025-04-01 00:55:27.839 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui.css - 304 null text/css 187.2161ms
+2025-04-01 00:55:27.841 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 189.1669ms
+2025-04-01 00:55:27.872 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.3686ms
+2025-04-01 00:55:27.919 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-04-01 00:55:27.938 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/v1/swagger.json
+Accept: application/json,*/*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: application/json;charset=utf-8
+ResponseBody: {
+  "openapi": "3.0.1",
+  "info": {
+    "title": "P7CreateRestApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/BidLists": {
+      "get": {
+        "tags": [
+          "BidLists"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "BidLists"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BidLists/{id}": {
+      "get": {
+        "tags": [
+          "BidLists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "BidLists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+Duration: 18,9132
+2025-04-01 00:55:27.939 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.4645ms
+2025-04-01 00:55:49.978 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/Login/login - application/json 55
+2025-04-01 00:55:49.980 +02:00 [INF] Executing endpoint 'Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi)'
+2025-04-01 00:55:49.992 +02:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(P7CreateRestApi.Models.LoginModel) on controller Dot.Net.WebApi.Controllers.LoginController (P7CreateRestApi).
+2025-04-01 00:55:52.107 +02:00 [INF] Executed DbCommand (36ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-01 00:55:52.243 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-01 00:55:52.265 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-04-01 00:55:52.270 +02:00 [INF] Executed action Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi) in 2275.6301ms
+2025-04-01 00:55:52.270 +02:00 [INF] Executed endpoint 'Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi)'
+2025-04-01 00:55:52.270 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /Login/login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 55
+Postman-Token: [Redacted]
+StatusCode: 200
+Content-Type: text/plain; charset=utf-8
+RequestBody: {
+  "username": "Admin",
+  "password": "Admin!123"
+}
+RequestBodyStatus: [Completed]
+ResponseBody: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQzNDYyNjUyLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MjEwIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIxMCJ9.7_kGf_VdywyLmzPUfQjRcmwodMj2Bq-RwKUvdsjgPLo
+Duration: 2291,228
+2025-04-01 00:55:52.274 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/Login/login - 200 null text/plain; charset=utf-8 2296.0914ms
+2025-04-01 00:56:48.159 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/BidLists - application/json 674
+2025-04-01 00:56:48.189 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi)'
+2025-04-01 00:56:48.198 +02:00 [INF] Route matched with {action = "PostBidList", controller = "BidLists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Domain.BidList]] PostBidList(P7CreateRestApi.Model.BidListDTO) on controller P7CreateRestApi.Controllers.BidListsController (P7CreateRestApi).
+2025-04-01 00:56:48.364 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 50), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2025-04-01 00:56:48.379 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Dot.Net.WebApi.Domain.BidList'.
+2025-04-01 00:56:48.395 +02:00 [INF] Executed action P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi) in 196.8291ms
+2025-04-01 00:56:48.395 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi)'
+2025-04-01 00:56:48.395 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 674
+Postman-Token: [Redacted]
+StatusCode: 201
+Content-Type: application/json; charset=utf-8
+Location: https://localhost:7210/api/BidLists/2
+RequestBody: {
+    "Account": "Test Bid",
+    "BidType": "Limit",
+    "BidQuantity": 111,
+    "AskQuantity": 12,
+    "Bid": 102.5,
+    "Ask": 103.5,
+    "Benchmark": "Benchmark Test",
+    "BidListDate": "2025-03-11T18:08:31.867Z",
+    "Commentary": "New BidList creation",
+    "BidSecurity": "Security Test",
+    "BidStatus": "Pending",
+    "Trader": "Jean Trader",
+    "Book": "Book JT",
+    "CreationName": "Jean Createur",
+    "CreationDate": "2025-03-11T18:08:31.867Z",
+    "RevisionName": "Reviser JC",
+    "RevisionDate": "2025-03-11T18:08:31.867Z",
+    "DealName": "Deal Test",
+    "DealType": "Type 12",
+    "SourceListId": "Source 12",
+    "Side": "Sell"
+}
+RequestBodyStatus: [Completed]
+ResponseBody: {"bidListId":2,"account":"Test Bid","bidType":"Limit","bidQuantity":111,"askQuantity":null,"bid":null,"ask":null,"benchmark":null,"bidListDate":"0001-01-01T00:00:00","commentary":null,"bidSecurity":null,"bidStatus":null,"trader":null,"book":null,"creationName":null,"creationDate":"0001-01-01T00:00:00","revisionName":null,"revisionDate":"0001-01-01T00:00:00","dealName":null,"dealType":null,"sourceListId":null,"side":null}
+Duration: 235,5803
+2025-04-01 00:56:48.395 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/BidLists - 201 null application/json; charset=utf-8 236.3209ms
+2025-04-01 00:56:57.486 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/CurvePoints - application/json 70
+2025-04-01 00:56:57.487 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi)'
+2025-04-01 00:56:57.489 +02:00 [INF] Route matched with {action = "PostCurvePoint", controller = "CurvePoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Domain.CurvePoint]] PostCurvePoint(P7CreateRestApi.Model.CurvePointDTO) on controller P7CreateRestApi.Controllers.CurvePointsController (P7CreateRestApi).
+2025-04-01 00:56:57.551 +02:00 [INF] Executed action P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi) in 62.202ms
+2025-04-01 00:56:57.574 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi)'
+2025-04-01 00:56:57.587 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'P7CreateRestApi.Repositories.ICurvePointsRepository' while attempting to activate 'P7CreateRestApi.Controllers.CurvePointsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method391(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-04-01 00:56:57.682 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/CurvePoints
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 70
+Postman-Token: [Redacted]
+StatusCode: 404
+RequestBody: 
+RequestBodyStatus: [Not consumed by app]
+Duration: 195,6034
+2025-04-01 00:56:57.702 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'P7CreateRestApi.Repositories.ICurvePointsRepository' while attempting to activate 'P7CreateRestApi.Controllers.CurvePointsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method391(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-01 00:56:57.706 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/CurvePoints - 500 null text/plain; charset=utf-8 219.8774ms
+2025-04-01 00:56:57.706 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7210/api/CurvePoints, Response status code: 500
+2025-04-01 00:57:05.477 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/CurvePoints - application/json 70
+2025-04-01 00:57:05.479 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi)'
+2025-04-01 00:57:05.479 +02:00 [INF] Route matched with {action = "PostCurvePoint", controller = "CurvePoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Domain.CurvePoint]] PostCurvePoint(P7CreateRestApi.Model.CurvePointDTO) on controller P7CreateRestApi.Controllers.CurvePointsController (P7CreateRestApi).
+2025-04-01 00:57:05.512 +02:00 [INF] Executed action P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi) in 32.8077ms
+2025-04-01 00:57:05.533 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi)'
+2025-04-01 00:57:05.543 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'P7CreateRestApi.Repositories.ICurvePointsRepository' while attempting to activate 'P7CreateRestApi.Controllers.CurvePointsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method391(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-04-01 00:57:05.623 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/CurvePoints
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 70
+Postman-Token: [Redacted]
+StatusCode: 404
+RequestBody: 
+RequestBodyStatus: [Not consumed by app]
+Duration: 145,4977
+2025-04-01 00:57:05.641 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'P7CreateRestApi.Repositories.ICurvePointsRepository' while attempting to activate 'P7CreateRestApi.Controllers.CurvePointsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method391(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-01 00:57:05.642 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/CurvePoints - 500 null text/plain; charset=utf-8 164.9452ms
+2025-04-01 00:57:05.642 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7210/api/CurvePoints, Response status code: 500
+2025-04-01 00:57:17.710 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/RuleNames - application/json 218
+2025-04-01 00:57:17.710 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.RuleNamesController.PostRuleName (P7CreateRestApi)'
+2025-04-01 00:57:17.713 +02:00 [INF] Route matched with {action = "PostRuleName", controller = "RuleNames"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Controllers.RuleName]] PostRuleName(Dot.Net.WebApi.Controllers.RuleName) on controller P7CreateRestApi.Controllers.RuleNamesController (P7CreateRestApi).
+2025-04-01 00:57:17.747 +02:00 [INF] Executed action P7CreateRestApi.Controllers.RuleNamesController.PostRuleName (P7CreateRestApi) in 34.3008ms
+2025-04-01 00:57:17.771 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.RuleNamesController.PostRuleName (P7CreateRestApi)'
+2025-04-01 00:57:17.781 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'P7CreateRestApi.Repositories.IRuleNamesRepository' while attempting to activate 'P7CreateRestApi.Controllers.RuleNamesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method400(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-04-01 00:57:17.861 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/RuleNames
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 218
+Postman-Token: [Redacted]
+StatusCode: 404
+RequestBody: 
+RequestBodyStatus: [Not consumed by app]
+Duration: 151,4342
+2025-04-01 00:57:17.880 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'P7CreateRestApi.Repositories.IRuleNamesRepository' while attempting to activate 'P7CreateRestApi.Controllers.RuleNamesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method400(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-01 00:57:17.881 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/RuleNames - 500 null text/plain; charset=utf-8 171.8231ms
+2025-04-01 00:57:17.881 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7210/api/RuleNames, Response status code: 500
+2025-04-01 00:57:25.340 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/Trades - application/json 570
+2025-04-01 00:57:25.341 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.TradesController.PostTrade (P7CreateRestApi)'
+2025-04-01 00:57:25.343 +02:00 [INF] Route matched with {action = "PostTrade", controller = "Trades"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Domain.Trade]] PostTrade(Dot.Net.WebApi.Domain.Trade) on controller P7CreateRestApi.Controllers.TradesController (P7CreateRestApi).
+2025-04-01 00:57:25.376 +02:00 [INF] Executed action P7CreateRestApi.Controllers.TradesController.PostTrade (P7CreateRestApi) in 33.2919ms
+2025-04-01 00:57:25.398 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.TradesController.PostTrade (P7CreateRestApi)'
+2025-04-01 00:57:25.409 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'P7CreateRestApi.Repositories.ITradesRepository' while attempting to activate 'P7CreateRestApi.Controllers.TradesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method408(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-04-01 00:57:25.491 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Trades
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 570
+Postman-Token: [Redacted]
+StatusCode: 404
+RequestBody: 
+RequestBodyStatus: [Not consumed by app]
+Duration: 150,8994
+2025-04-01 00:57:25.510 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'P7CreateRestApi.Repositories.ITradesRepository' while attempting to activate 'P7CreateRestApi.Controllers.TradesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method408(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-01 00:57:25.511 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/Trades - 500 null text/plain; charset=utf-8 171.0434ms
+2025-04-01 00:57:25.511 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7210/api/Trades, Response status code: 500
+2025-04-01 01:03:53.856 +02:00 [INF] User profile is available. Using 'C:\Users\Dany\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-01 01:03:54.062 +02:00 [INF] Now listening on: https://localhost:7210
+2025-04-01 01:03:54.063 +02:00 [INF] Now listening on: http://localhost:5267
+2025-04-01 01:03:54.098 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-01 01:03:54.099 +02:00 [INF] Hosting environment: Development
+2025-04-01 01:03:54.099 +02:00 [INF] Content root path: C:\Users\Dany\source\repos\Projet 7 - Back-end.NET_API_REST-main\P7CreateRestApi
+2025-04-01 01:03:54.665 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-04-01 01:03:54.826 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.html
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: text/html;charset=utf-8
+ResponseBody: <!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+       
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+
+    <script src="./swagger-ui-bundle.js" charset="utf-8"></script>
+    <script src="./swagger-ui-standalone-preset.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
+
+Duration: 74,9234
+2025-04-01 01:03:54.828 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 167.0601ms
+2025-04-01 01:03:54.835 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-01 01:03:54.835 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-04-01 01:03:54.835 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2025-04-01 01:03:54.844 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.js
+Accept: */*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: application/javascript;charset=utf-8
+ResponseBody: /* Source: https://gist.github.com/lamberta/3768814
+ * Parse a string function definition and return a function object. Does not use eval.
+ * @param {string} str
+ * @return {function}
+ *
+ * Example:
+ *  var f = function (x, y) { return x * y; };
+ *  var g = parseFunction(f.toString());
+ *  g(33, 3); //=> 99
+ */
+function parseFunction(str) {
+    if (!str) return void (0);
+
+    var fn_body_idx = str.indexOf('{'),
+        fn_body = str.substring(fn_body_idx + 1, str.lastIndexOf('}')),
+        fn_declare = str.substring(0, fn_body_idx),
+        fn_params = fn_declare.substring(fn_declare.indexOf('(') + 1, fn_declare.lastIndexOf(')')),
+        args = fn_params.split(',');
+
+    args.push(fn_body);
+
+    function Fn() {
+        return Function.apply(this, args);
+    }
+    Fn.prototype = Function.prototype;
+
+    return new Fn();
+}
+
+window.onload = function () {
+    var configObject = JSON.parse('{"urls":[{"url":"v1/swagger.json","name":"P7CreateRestApi v1"}],"deepLinking":false,"persistAuthorization":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"tryItOutEnabled":false}');
+    var oauthConfigObject = JSON.parse('{"scopeSeparator":" ","scopes":[],"useBasicAuthenticationWithAccessCodeGrant":false,"usePkceWithAuthorizationCodeGrant":false}');
+
+    // Workaround for https://github.com/swagger-api/swagger-ui/issues/5945
+    configObject.urls.forEach(function (item) {
+        if (item.url.startsWith("http") || item.url.startsWith("/")) return;
+        item.url = window.location.href.replace("index.html", item.url).split('#')[0];
+    });
+
+    // If validatorUrl is not explicitly provided, disable the feature by setting to null
+    if (!configObject.hasOwnProperty("validatorUrl"))
+        configObject.validatorUrl = null
+
+    // If oauth2RedirectUrl isn't specified, use the built-in default
+    if (!configObject.hasOwnProperty("oauth2RedirectUrl"))
+        configObject.oauth2RedirectUrl = (new URL("oauth2-redirect.html", window.location.href)).href;
+
+    // Apply mandatory parameters
+    configObject.dom_id = "#swagger-ui";
+    configObject.presets = [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset];
+    configObject.layout = "StandaloneLayout";
+
+    // Parse and add interceptor functions
+    var interceptors = JSON.parse('{}');
+    if (interceptors.RequestInterceptorFunction)
+        configObject.requestInterceptor = parseFunction(interceptors.RequestInterceptorFunction);
+    if (interceptors.ResponseInterceptorFunction)
+        configObject.responseInterceptor = parseFunction(interceptors.ResponseInterceptorFunction);
+
+    if (configObject.plugins) {
+        configObject.plugins = configObject.plugins.map(eval);
+    }
+    
+    // Begin Swagger UI call region
+
+    const ui = SwaggerUIBundle(configObject);
+
+    ui.initOAuth(oauthConfigObject);
+
+    // End Swagger UI call region
+
+    window.ui = ui
+}
+
+Duration: 8,3505
+2025-04-01 01:03:54.848 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 11.3017ms
+2025-04-01 01:03:54.891 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 55.6214ms
+2025-04-01 01:03:54.903 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.0133ms
+2025-04-01 01:03:54.940 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-04-01 01:03:54.958 +02:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/v1/swagger.json
+Accept: application/json,*/*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: application/json;charset=utf-8
+ResponseBody: {
+  "openapi": "3.0.1",
+  "info": {
+    "title": "P7CreateRestApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/BidLists": {
+      "get": {
+        "tags": [
+          "BidLists"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "BidLists"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BidLists/{id}": {
+      "get": {
+        "tags": [
+          "BidLists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "BidLists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+Duration: 17,7278
+2025-04-01 01:03:54.959 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.3078ms
+2025-04-01 01:03:58.125 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/Login/login - application/json 55
+2025-04-01 01:03:58.127 +02:00 [INF] Executing endpoint 'Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi)'
+2025-04-01 01:03:58.137 +02:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(P7CreateRestApi.Models.LoginModel) on controller Dot.Net.WebApi.Controllers.LoginController (P7CreateRestApi).
+2025-04-01 01:03:59.061 +02:00 [INF] Executed DbCommand (30ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-01 01:03:59.203 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-01 01:03:59.222 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-04-01 01:03:59.225 +02:00 [INF] Executed action Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi) in 1085.4504ms
+2025-04-01 01:03:59.225 +02:00 [INF] Executed endpoint 'Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi)'
+2025-04-01 01:03:59.225 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /Login/login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 55
+Postman-Token: [Redacted]
+StatusCode: 200
+Content-Type: text/plain; charset=utf-8
+RequestBody: {
+  "username": "Admin",
+  "password": "Admin!123"
+}
+RequestBodyStatus: [Completed]
+ResponseBody: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQzNDYzMTM5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MjEwIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIxMCJ9.FXrS67kz58eQw9XRuO3E6RK4eJ0Ct5XuJ5GHWnJ9NI4
+Duration: 1099,4004
+2025-04-01 01:03:59.229 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/Login/login - 200 null text/plain; charset=utf-8 1103.7215ms
+2025-04-01 01:04:57.900 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/BidLists - application/json 674
+2025-04-01 01:04:57.931 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi)'
+2025-04-01 01:04:57.933 +02:00 [INF] Route matched with {action = "PostBidList", controller = "BidLists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Domain.BidList]] PostBidList(P7CreateRestApi.Model.BidListDTO) on controller P7CreateRestApi.Controllers.BidListsController (P7CreateRestApi).
+2025-04-01 01:04:58.140 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 50), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2025-04-01 01:04:58.157 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Dot.Net.WebApi.Domain.BidList'.
+2025-04-01 01:04:58.173 +02:00 [INF] Executed action P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi) in 239.7618ms
+2025-04-01 01:04:58.173 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi)'
+2025-04-01 01:04:58.173 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 674
+Postman-Token: [Redacted]
+StatusCode: 201
+Content-Type: application/json; charset=utf-8
+Location: https://localhost:7210/api/BidLists/3
+RequestBody: {
+    "Account": "Test Bid",
+    "BidType": "Limit",
+    "BidQuantity": 111,
+    "AskQuantity": 12,
+    "Bid": 102.5,
+    "Ask": 103.5,
+    "Benchmark": "Benchmark Test",
+    "BidListDate": "2025-03-11T18:08:31.867Z",
+    "Commentary": "New BidList creation",
+    "BidSecurity": "Security Test",
+    "BidStatus": "Pending",
+    "Trader": "Jean Trader",
+    "Book": "Book JT",
+    "CreationName": "Jean Createur",
+    "CreationDate": "2025-03-11T18:08:31.867Z",
+    "RevisionName": "Reviser JC",
+    "RevisionDate": "2025-03-11T18:08:31.867Z",
+    "DealName": "Deal Test",
+    "DealType": "Type 12",
+    "SourceListId": "Source 12",
+    "Side": "Sell"
+}
+RequestBodyStatus: [Completed]
+ResponseBody: {"bidListId":3,"account":"Test Bid","bidType":"Limit","bidQuantity":111,"askQuantity":null,"bid":null,"ask":null,"benchmark":null,"bidListDate":"0001-01-01T00:00:00","commentary":null,"bidSecurity":null,"bidStatus":null,"trader":null,"book":null,"creationName":null,"creationDate":"0001-01-01T00:00:00","revisionName":null,"revisionDate":"0001-01-01T00:00:00","dealName":null,"dealType":null,"sourceListId":null,"side":null}
+Duration: 272,7678
+2025-04-01 01:04:58.174 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/BidLists - 201 null application/json; charset=utf-8 273.3807ms
+2025-04-01 01:05:02.207 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/CurvePoints - application/json 70
+2025-04-01 01:05:02.209 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi)'
+2025-04-01 01:05:02.211 +02:00 [INF] Route matched with {action = "PostCurvePoint", controller = "CurvePoints"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Domain.CurvePoint]] PostCurvePoint(P7CreateRestApi.Model.CurvePointDTO) on controller P7CreateRestApi.Controllers.CurvePointsController (P7CreateRestApi).
+2025-04-01 01:05:02.219 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-04-01 01:05:02.226 +02:00 [INF] Executed action P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi) in 14.9514ms
+2025-04-01 01:05:02.226 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.CurvePointsController.PostCurvePoint (P7CreateRestApi)'
+2025-04-01 01:05:02.226 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/CurvePoints
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 70
+Postman-Token: [Redacted]
+StatusCode: 400
+Content-Type: application/problem+json; charset=utf-8
+RequestBody: {
+  "AsOfDate": "2023-04-01T00:00:00",
+  "CurvePointValue": 100.5
+}
+RequestBodyStatus: [Completed]
+ResponseBody: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"CurveId":["The curve Id is required."]},"traceId":"00-1dd473334a1860fc357b3dfcf368d58e-24886349a2d46f44-00"}
+Duration: 17,7432
+2025-04-01 01:05:02.226 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/CurvePoints - 400 null application/problem+json; charset=utf-8 18.8536ms
+2025-04-01 01:05:15.525 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/Ratings - application/json 99
+2025-04-01 01:05:15.528 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.RatingsController.PostRating (P7CreateRestApi)'
+2025-04-01 01:05:15.530 +02:00 [INF] Route matched with {action = "PostRating", controller = "Ratings"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Controllers.Domain.Rating]] PostRating(Dot.Net.WebApi.Controllers.Domain.Rating) on controller P7CreateRestApi.Controllers.RatingsController (P7CreateRestApi).
+2025-04-01 01:05:15.552 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 1) (DbType = Byte), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Ratings] ([FitchRating], [MoodysRating], [OrderNumber], [SandPRating])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-04-01 01:05:15.553 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Dot.Net.WebApi.Controllers.Domain.Rating'.
+2025-04-01 01:05:15.555 +02:00 [INF] Executed action P7CreateRestApi.Controllers.RatingsController.PostRating (P7CreateRestApi) in 25.0284ms
+2025-04-01 01:05:15.555 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.RatingsController.PostRating (P7CreateRestApi)'
+2025-04-01 01:05:15.555 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Ratings
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 99
+Postman-Token: [Redacted]
+StatusCode: 201
+Content-Type: application/json; charset=utf-8
+Location: https://localhost:7210/api/Ratings/1
+RequestBody: {
+    "MoodysRating": "AAA",
+  "SandPRating": "AA",
+  "FitchRating": "A",
+  "OrderNumber": 1
+}
+RequestBodyStatus: [Completed]
+ResponseBody: {"id":1,"moodysRating":"AAA","sandPRating":"AA","fitchRating":"A","orderNumber":1}
+Duration: 29,2138
+2025-04-01 01:05:15.555 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/Ratings - 201 null application/json; charset=utf-8 29.6509ms
+2025-04-01 01:05:20.556 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/RuleNames - application/json 218
+2025-04-01 01:05:20.557 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.RuleNamesController.PostRuleName (P7CreateRestApi)'
+2025-04-01 01:05:20.559 +02:00 [INF] Route matched with {action = "PostRuleName", controller = "RuleNames"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Controllers.RuleName]] PostRuleName(Dot.Net.WebApi.Controllers.RuleName) on controller P7CreateRestApi.Controllers.RuleNamesController (P7CreateRestApi).
+2025-04-01 01:05:20.573 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Rules] ([Description], [JSon], [SqlPart], [SqlStr], [Template], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-04-01 01:05:20.574 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Dot.Net.WebApi.Controllers.RuleName'.
+2025-04-01 01:05:20.575 +02:00 [INF] Executed action P7CreateRestApi.Controllers.RuleNamesController.PostRuleName (P7CreateRestApi) in 15.314ms
+2025-04-01 01:05:20.575 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.RuleNamesController.PostRuleName (P7CreateRestApi)'
+2025-04-01 01:05:20.575 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/RuleNames
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 218
+Postman-Token: [Redacted]
+StatusCode: 201
+Content-Type: application/json; charset=utf-8
+Location: https://localhost:7210/api/RuleNames/1
+RequestBody: {
+    "Username": "admin",
+  "Description": "Example rule for transactions",
+  "JSon": "{\"field\": \"value\"}",
+  "Template": "Template1",
+  "SqlStr": "SELECT * FROM Rules",
+  "SqlPart": "WHERE condition = 1"
+}
+RequestBodyStatus: [Completed]
+ResponseBody: {"id":1,"username":"admin","description":"Example rule for transactions","jSon":"{\"field\": \"value\"}","template":"Template1","sqlStr":"SELECT * FROM Rules","sqlPart":"WHERE condition = 1"}
+Duration: 18,0145
+2025-04-01 01:05:20.575 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/RuleNames - 201 null application/json; charset=utf-8 18.4826ms
+2025-04-01 01:05:24.382 +02:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/Trades - application/json 570
+2025-04-01 01:05:24.382 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.TradesController.PostTrade (P7CreateRestApi)'
+2025-04-01 01:05:24.384 +02:00 [INF] Route matched with {action = "PostTrade", controller = "Trades"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Domain.Trade]] PostTrade(Dot.Net.WebApi.Domain.Trade) on controller P7CreateRestApi.Controllers.TradesController (P7CreateRestApi).
+2025-04-01 01:05:24.418 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Double), @p5='?' (DbType = Double), @p6='?' (DbType = DateTime2), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (DbType = DateTime2), @p11='?' (Size = 4000), @p12='?' (DbType = Double), @p13='?' (DbType = Double), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Trades] ([Account], [AccountType], [Benchmark], [Book], [BuyPrice], [BuyQuantity], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [SellPrice], [SellQuantity], [Side], [SourceListId], [TradeSecurity], [TradeStatus], [Trader], [TradingDate])
+OUTPUT INSERTED.[TradeId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+2025-04-01 01:05:24.419 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Dot.Net.WebApi.Domain.Trade'.
+2025-04-01 01:05:24.421 +02:00 [INF] Executed action P7CreateRestApi.Controllers.TradesController.PostTrade (P7CreateRestApi) in 36.8015ms
+2025-04-01 01:05:24.421 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.TradesController.PostTrade (P7CreateRestApi)'
+2025-04-01 01:05:24.421 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/Trades
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 570
+Postman-Token: [Redacted]
+StatusCode: 201
+Content-Type: application/json; charset=utf-8
+Location: https://localhost:7210/api/Trades/1
+RequestBody: {
+   "Account": "Account123",
+  "AccountType": "TypeA",
+  "BuyQuantity": 100,
+  "SellQuantity": 50,
+  "BuyPrice": 10.5,
+  "SellPrice": 12.5,
+  "TradingDate": "2023-04-01T14:30:00",
+  "TradeSecurity": "SecurityABC",
+  "TradeStatus": "Active",
+  "Trader": "JohnDoe",
+  "Benchmark": "BenchmarkXYZ",
+  "Book": "Book1",
+  "CreationName": "Admin",
+  "CreationDate": "2023-04-01T12:00:00",
+  "RevisionName": "Revision1",
+  "RevisionDate": "2023-04-01T13:00:00",
+  "DealName": "Deal123",
+  "DealType": "Type1",
+  "SourceListId": "List123",
+  "Side": "Buy"
+}
+RequestBodyStatus: [Completed]
+ResponseBody: {"tradeId":1,"account":"Account123","accountType":"TypeA","buyQuantity":100,"sellQuantity":50,"buyPrice":10.5,"sellPrice":12.5,"tradingDate":null,"tradeSecurity":"SecurityABC","tradeStatus":"Active","trader":"JohnDoe","benchmark":"BenchmarkXYZ","book":"Book1","creationName":"Admin","creationDate":"2023-04-01T12:00:00","revisionName":"Revision1","revisionDate":"2023-04-01T13:00:00","dealName":"Deal123","dealType":"Type1","sourceListId":"List123","side":"Buy"}
+Duration: 39,3969
+2025-04-01 01:05:24.421 +02:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/Trades - 201 null application/json; charset=utf-8 39.7944ms
+2025-04-01 01:05:30.413 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/RuleNames - null null
+2025-04-01 01:05:30.414 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.RuleNamesController.GetRules (P7CreateRestApi)'
+2025-04-01 01:05:30.415 +02:00 [INF] Route matched with {action = "GetRules", controller = "RuleNames"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Dot.Net.WebApi.Controllers.RuleName]]] GetRules() on controller P7CreateRestApi.Controllers.RuleNamesController (P7CreateRestApi).
+2025-04-01 01:05:30.421 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Description], [r].[JSon], [r].[SqlPart], [r].[SqlStr], [r].[Template], [r].[Username]
+FROM [Rules] AS [r]
+2025-04-01 01:05:30.422 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Dot.Net.WebApi.Controllers.RuleName, P7CreateRestApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-01 01:05:30.423 +02:00 [INF] Executed action P7CreateRestApi.Controllers.RuleNamesController.GetRules (P7CreateRestApi) in 7.6912ms
+2025-04-01 01:05:30.423 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.RuleNamesController.GetRules (P7CreateRestApi)'
+2025-04-01 01:05:30.423 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/RuleNames
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+ResponseBody: [{"id":1,"username":"admin","description":"Example rule for transactions","jSon":"{\"field\": \"value\"}","template":"Template1","sqlStr":"SELECT * FROM Rules","sqlPart":"WHERE condition = 1"}]
+Duration: 10,0015
+2025-04-01 01:05:30.423 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/RuleNames - 200 null application/json; charset=utf-8 10.4142ms
+2025-04-01 01:05:34.725 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/Trades - null null
+2025-04-01 01:05:34.726 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.TradesController.GetTrades (P7CreateRestApi)'
+2025-04-01 01:05:34.728 +02:00 [INF] Route matched with {action = "GetTrades", controller = "Trades"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Dot.Net.WebApi.Domain.Trade]]] GetTrades() on controller P7CreateRestApi.Controllers.TradesController (P7CreateRestApi).
+2025-04-01 01:05:34.735 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TradeId], [t].[Account], [t].[AccountType], [t].[Benchmark], [t].[Book], [t].[BuyPrice], [t].[BuyQuantity], [t].[CreationDate], [t].[CreationName], [t].[DealName], [t].[DealType], [t].[RevisionDate], [t].[RevisionName], [t].[SellPrice], [t].[SellQuantity], [t].[Side], [t].[SourceListId], [t].[TradeSecurity], [t].[TradeStatus], [t].[Trader], [t].[TradingDate]
+FROM [Trades] AS [t]
+2025-04-01 01:05:34.737 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Dot.Net.WebApi.Domain.Trade, P7CreateRestApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-01 01:05:34.737 +02:00 [INF] Executed action P7CreateRestApi.Controllers.TradesController.GetTrades (P7CreateRestApi) in 9.2203ms
+2025-04-01 01:05:34.737 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.TradesController.GetTrades (P7CreateRestApi)'
+2025-04-01 01:05:34.737 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Trades
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+ResponseBody: [{"tradeId":1,"account":"Account123","accountType":"TypeA","buyQuantity":100,"sellQuantity":50,"buyPrice":10.5,"sellPrice":12.5,"tradingDate":null,"tradeSecurity":"SecurityABC","tradeStatus":"Active","trader":"JohnDoe","benchmark":"BenchmarkXYZ","book":"Book1","creationName":"Admin","creationDate":"2023-04-01T12:00:00","revisionName":"Revision1","revisionDate":"2023-04-01T13:00:00","dealName":"Deal123","dealType":"Type1","sourceListId":"List123","side":"Buy"}]
+Duration: 11,8533
+2025-04-01 01:05:34.737 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/Trades - 200 null application/json; charset=utf-8 12.1572ms
+2025-04-01 01:05:43.974 +02:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7210/api/Trades/1 - null null
+2025-04-01 01:05:43.975 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.TradesController.DeleteTrade (P7CreateRestApi)'
+2025-04-01 01:05:43.977 +02:00 [INF] Route matched with {action = "DeleteTrade", controller = "Trades"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteTrade(Int32) on controller P7CreateRestApi.Controllers.TradesController (P7CreateRestApi).
+2025-04-01 01:05:43.998 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[TradeId], [t].[Account], [t].[AccountType], [t].[Benchmark], [t].[Book], [t].[BuyPrice], [t].[BuyQuantity], [t].[CreationDate], [t].[CreationName], [t].[DealName], [t].[DealType], [t].[RevisionDate], [t].[RevisionName], [t].[SellPrice], [t].[SellQuantity], [t].[Side], [t].[SourceListId], [t].[TradeSecurity], [t].[TradeStatus], [t].[Trader], [t].[TradingDate]
+FROM [Trades] AS [t]
+WHERE [t].[TradeId] = @__p_0
+2025-04-01 01:05:44.004 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Trades]
+OUTPUT 1
+WHERE [TradeId] = @p0;
+2025-04-01 01:05:44.007 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-04-01 01:05:44.007 +02:00 [INF] Executed action P7CreateRestApi.Controllers.TradesController.DeleteTrade (P7CreateRestApi) in 30.4321ms
+2025-04-01 01:05:44.007 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.TradesController.DeleteTrade (P7CreateRestApi)'
+2025-04-01 01:05:44.007 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: DELETE
+Scheme: https
+PathBase: 
+Path: /api/Trades/1
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 204
+Duration: 32,8206
+2025-04-01 01:05:44.008 +02:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7210/api/Trades/1 - 204 null null 33.1787ms
+2025-04-01 01:05:48.156 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/Trades - null null
+2025-04-01 01:05:48.156 +02:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.TradesController.GetTrades (P7CreateRestApi)'
+2025-04-01 01:05:48.157 +02:00 [INF] Route matched with {action = "GetTrades", controller = "Trades"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Dot.Net.WebApi.Domain.Trade]]] GetTrades() on controller P7CreateRestApi.Controllers.TradesController (P7CreateRestApi).
+2025-04-01 01:05:48.158 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TradeId], [t].[Account], [t].[AccountType], [t].[Benchmark], [t].[Book], [t].[BuyPrice], [t].[BuyQuantity], [t].[CreationDate], [t].[CreationName], [t].[DealName], [t].[DealType], [t].[RevisionDate], [t].[RevisionName], [t].[SellPrice], [t].[SellQuantity], [t].[Side], [t].[SourceListId], [t].[TradeSecurity], [t].[TradeStatus], [t].[Trader], [t].[TradingDate]
+FROM [Trades] AS [t]
+2025-04-01 01:05:48.158 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-04-01 01:05:48.159 +02:00 [INF] Executed action P7CreateRestApi.Controllers.TradesController.GetTrades (P7CreateRestApi) in 2.7745ms
+2025-04-01 01:05:48.159 +02:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.TradesController.GetTrades (P7CreateRestApi)'
+2025-04-01 01:05:48.159 +02:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Trades
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.3
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 404
+Content-Type: application/problem+json; charset=utf-8
+ResponseBody: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"Not Found","status":404,"traceId":"00-3a163b569d6383ba29da19799817b6e6-5df8736c68368c3e-00"}
+Duration: 3,6168
+2025-04-01 01:05:48.160 +02:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/Trades - 404 null application/problem+json; charset=utf-8 3.9149ms

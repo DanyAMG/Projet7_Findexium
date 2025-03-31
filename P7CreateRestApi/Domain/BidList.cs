@@ -26,39 +26,39 @@ namespace Dot.Net.WebApi.Domain
         public double? Ask { get; set; }
 
         [StringLength(50, ErrorMessage = "Benchmark cannot be longer than 50 characters.")]
-        public string Benchmark { get; set; }
+        public string? Benchmark { get; set; }
+        
+        public DateTime BidListDate { get; set; }
 
-        public DateTime? BidListDate { get; set; }
-
-        public string Commentary { get; set; }
+        public string? Commentary { get; set; }
 
         [StringLength(50, ErrorMessage = "BidSecurity cannot be longer than 50 characters.")]
-        public string BidSecurity { get; set; }
+        public string? BidSecurity { get; set; }
 
         [StringLength(50, ErrorMessage = "BidStatus cannot be longer than 50 characters.")]
-        public string BidStatus { get; set; }
+        public string? BidStatus { get; set; }
 
         [StringLength(50, ErrorMessage = "Trader cannot be longer than 50 characters.")]
-        public string Trader { get; set; }
+        public string? Trader { get; set; }
 
-        public string Book { get; set; }
+        public string? Book { get; set; }
 
-        public string CreationName { get; set; }
+        public string? CreationName { get; set; }
 
-        public DateTime? CreationDate { get; set; }
+        public DateTime CreationDate { get; set; }
 
-        public string RevisionName { get; set; }
+        public string? RevisionName { get; set; }
 
         [Compare("CreationDate", ErrorMessage = "Revision Date must be after Creation Date.")]
-        public DateTime? RevisionDate { get; set; }
+        public DateTime RevisionDate { get; set; }
 
-        public string DealName { get; set; }
+        public string? DealName { get; set; }
 
-        public string DealType { get; set; }
+        public string? DealType { get; set; }
 
-        public string SourceListId { get; set; }
+        public string? SourceListId { get; set; }
 
-        public string Side { get; set; }
+        public string? Side { get; set; }
 
         public void Validate()
         {

@@ -31,7 +31,7 @@ namespace P7CreateRestApi.Tests
                 // Arrange
                 var trades = new List<Trade>
             {
-                new Trade { TradeId = 1, Account = "Test Account", BuyQuantity = 100, SellQuantity = 50, BuyPrice = 10, SellPrice = 12, TradeDate = DateTime.Now, TradeSecurity = "Security1", TradeStatus = "Active", Trader = "Trader1" }
+                new Trade { TradeId = 1, Account = "Test Account", BuyQuantity = 100, SellQuantity = 50, BuyPrice = 10, SellPrice = 12, TradingDate = DateTime.Now, TradeSecurity = "Security1", TradeStatus = "Active", Trader = "Trader1" }
             };
                 _mockRepo.Setup(repo => repo.GetAllTradesAsync()).ReturnsAsync(trades);
 
@@ -64,7 +64,7 @@ namespace P7CreateRestApi.Tests
             public async Task GetTrade_ReturnsOkResult_WhenTradeExists()
             {
                 // Arrange
-                var trade = new Trade { TradeId = 1, Account = "Test Account", BuyQuantity = 100, SellQuantity = 50, BuyPrice = 10, SellPrice = 12, TradeDate = DateTime.Now, TradeSecurity = "Security1", TradeStatus = "Active", Trader = "Trader1" };
+                var trade = new Trade { TradeId = 1, Account = "Test Account", BuyQuantity = 100, SellQuantity = 50, BuyPrice = 10, SellPrice = 12, TradingDate = DateTime.Now, TradeSecurity = "Security1", TradeStatus = "Active", Trader = "Trader1" };
                 _mockRepo.Setup(repo => repo.GetTradeByIdAsync(1)).ReturnsAsync(trade);
 
                 // Act
@@ -96,8 +96,8 @@ namespace P7CreateRestApi.Tests
             public async Task PutTrade_ReturnsNoContent_WhenTradeIsUpdated()
             {
                 // Arrange
-                var tradeDTO = new Trade { Account = "Updated Account", BuyQuantity = 200, SellQuantity = 100, BuyPrice = 15, SellPrice = 18, TradeDate = DateTime.Now, TradeSecurity = "Security2", TradeStatus = "Completed", Trader = "Trader2" };
-                var existingTrade = new Trade { TradeId = 1, Account = "Test Account", BuyQuantity = 100, SellQuantity = 50, BuyPrice = 10, SellPrice = 12, TradeDate = DateTime.Now, TradeSecurity = "Security1", TradeStatus = "Active", Trader = "Trader1" };
+                var tradeDTO = new Trade { Account = "Updated Account", BuyQuantity = 200, SellQuantity = 100, BuyPrice = 15, SellPrice = 18, TradingDate = DateTime.Now, TradeSecurity = "Security2", TradeStatus = "Completed", Trader = "Trader2" };
+                var existingTrade = new Trade { TradeId = 1, Account = "Test Account", BuyQuantity = 100, SellQuantity = 50, BuyPrice = 10, SellPrice = 12, TradingDate = DateTime.Now, TradeSecurity = "Security1", TradeStatus = "Active", Trader = "Trader1" };
                 _mockRepo.Setup(repo => repo.GetTradeByIdAsync(It.IsAny<int>())).ReturnsAsync(existingTrade);
                 _mockRepo.Setup(repo => repo.UpdateTradeAsync(It.IsAny<Trade>())).ReturnsAsync((Trade)null);
 
@@ -112,7 +112,7 @@ namespace P7CreateRestApi.Tests
             public async Task PutTrade_ReturnsNotFound_WhenTradeDoesNotExist()
             {
                 // Arrange
-                var tradeDTO = new Trade { Account = "Updated Account", BuyQuantity = 200, SellQuantity = 100, BuyPrice = 15, SellPrice = 18, TradeDate = DateTime.Now, TradeSecurity = "Security2", TradeStatus = "Completed", Trader = "Trader2" };
+                var tradeDTO = new Trade { Account = "Updated Account", BuyQuantity = 200, SellQuantity = 100, BuyPrice = 15, SellPrice = 18, TradingDate = DateTime.Now, TradeSecurity = "Security2", TradeStatus = "Completed", Trader = "Trader2" };
                 _mockRepo.Setup(repo => repo.GetTradeByIdAsync(1)).ReturnsAsync((Trade)null);
 
                 // Act
@@ -134,13 +134,13 @@ namespace P7CreateRestApi.Tests
                     SellQuantity = 50,
                     BuyPrice = 10,
                     SellPrice = 12,
-                    TradeDate = DateTime.Now,
+                    TradingDate = DateTime.Now,
                     TradeSecurity = "Security1",
                     TradeStatus = "Active",
                     Trader = "Trader1"
                 };
 
-                var createdTrade = new Trade { TradeId = 1, Account = "Test Account", BuyQuantity = 100, SellQuantity = 50, BuyPrice = 10, SellPrice = 12, TradeDate = DateTime.Now, TradeSecurity = "Security1", TradeStatus = "Active", Trader = "Trader1" };
+                var createdTrade = new Trade { TradeId = 1, Account = "Test Account", BuyQuantity = 100, SellQuantity = 50, BuyPrice = 10, SellPrice = 12, TradingDate = DateTime.Now, TradeSecurity = "Security1", TradeStatus = "Active", Trader = "Trader1" };
                 _mockRepo.Setup(repo => repo.CreateTradeAsync(It.IsAny<Trade>())).ReturnsAsync(createdTrade);
 
                 // Act

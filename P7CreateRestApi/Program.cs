@@ -72,6 +72,10 @@ builder.Services.AddDbContext<LocalAuthDbContext>(options =>
 
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 builder.Services.AddScoped<IBidListRepository, BidListRepository>();
+builder.Services.AddScoped<ICurvePointsRepository, CurvePointRepository>();
+builder.Services.AddScoped<IRatingsRepository, RatingRepository>();
+builder.Services.AddScoped<IRuleNamesRepository, RuleNameRepository>();
+builder.Services.AddScoped<ITradesRepository, TradeRepository>();
 
 // Journalisation
 builder.Services.AddHttpLogging(logging =>

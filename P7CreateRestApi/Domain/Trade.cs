@@ -14,7 +14,7 @@ namespace Dot.Net.WebApi.Domain
         public double? SellQuantity { get; set; }
         public double? BuyPrice { get; set; }
         public double? SellPrice { get; set; }
-        public DateTime? TradeDate { get; set; }
+        public DateTime? TradingDate { get; set; }
         public string TradeSecurity { get; set; }
         public string TradeStatus { get; set; }
         public string Trader { get; set; }
