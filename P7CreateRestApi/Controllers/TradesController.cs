@@ -67,7 +67,7 @@ namespace P7CreateRestApi.Controllers
             existingTrade.SellQuantity = tradeDTO.SellQuantity;
             existingTrade.BuyPrice = tradeDTO.BuyPrice;
             existingTrade.SellPrice = tradeDTO.SellPrice;
-            existingTrade.TradeDate = tradeDTO.TradeDate;
+            //existingTrade.TradeDate = tradeDTO.TradeDate;
             existingTrade.TradeSecurity = tradeDTO.TradeSecurity;
             existingTrade.TradeStatus = tradeDTO.TradeStatus;
             existingTrade.Trader = tradeDTO.Trader;
@@ -105,7 +105,7 @@ namespace P7CreateRestApi.Controllers
                 SellQuantity = tradeDTO.SellQuantity,
                 BuyPrice = tradeDTO.BuyPrice,
                 SellPrice = tradeDTO.SellPrice,
-                TradeDate = tradeDTO.TradeDate,
+                //TradeDate = tradeDTO.TradeDate,
                 TradeSecurity = tradeDTO.TradeSecurity,
                 TradeStatus = tradeDTO.TradeStatus,
                 Trader = tradeDTO.Trader,

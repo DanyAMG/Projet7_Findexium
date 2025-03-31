@@ -1,0 +1,1648 @@
+2025-03-27 18:36:03.161 +01:00 [INF] User profile is available. Using 'C:\Users\Dany\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-27 18:36:03.268 +01:00 [INF] Creating key {0e6bb1a7-5ec4-4463-923b-44b5f20b6596} with creation date 2025-03-27 17:36:03Z, activation date 2025-03-27 17:36:03Z, and expiration date 2025-06-25 17:36:03Z.
+2025-03-27 18:36:03.277 +01:00 [INF] Writing data to file 'C:\Users\Dany\AppData\Local\ASP.NET\DataProtection-Keys\key-0e6bb1a7-5ec4-4463-923b-44b5f20b6596.xml'.
+2025-03-27 18:36:03.497 +01:00 [INF] Now listening on: https://localhost:7210
+2025-03-27 18:36:03.498 +01:00 [INF] Now listening on: http://localhost:5267
+2025-03-27 18:36:03.595 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-27 18:36:03.595 +01:00 [INF] Hosting environment: Development
+2025-03-27 18:36:03.595 +01:00 [INF] Content root path: C:\Users\Dany\source\repos\Projet 7 - Back-end.NET_API_REST-main\P7CreateRestApi
+2025-03-27 18:36:06.143 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger - null null
+2025-03-27 18:36:06.326 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Upgrade-Insecure-Requests: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 301
+Location: swagger/index.html
+Duration: 69,1314
+2025-03-27 18:36:06.329 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger - 301 0 null 192.5203ms
+2025-03-27 18:36:06.335 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.html - null null
+2025-03-27 18:36:06.378 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.html
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Upgrade-Insecure-Requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: text/html;charset=utf-8
+ResponseBody: <!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+       
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+
+    <script src="./swagger-ui-bundle.js" charset="utf-8"></script>
+    <script src="./swagger-ui-standalone-preset.js" charset="utf-8"></script>
+    <script src="index.js" charset="utf-8"></script>
+</body>
+</html>
+
+Duration: 40,0376
+2025-03-27 18:36:06.378 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.html - 200 null text/html;charset=utf-8 42.9338ms
+2025-03-27 18:36:06.386 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui.css - null null
+2025-03-27 18:36:06.390 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui-standalone-preset.js - null null
+2025-03-27 18:36:06.390 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/swagger-ui-bundle.js - null null
+2025-03-27 18:36:06.390 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.css - null null
+2025-03-27 18:36:06.391 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/index.js - null null
+2025-03-27 18:36:06.423 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-27 18:36:06.456 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/_vs/browserLink - null null
+2025-03-27 18:36:06.456 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.js
+Accept: */*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: application/javascript;charset=utf-8
+ResponseBody: /* Source: https://gist.github.com/lamberta/3768814
+ * Parse a string function definition and return a function object. Does not use eval.
+ * @param {string} str
+ * @return {function}
+ *
+ * Example:
+ *  var f = function (x, y) { return x * y; };
+ *  var g = parseFunction(f.toString());
+ *  g(33, 3); //=> 99
+ */
+function parseFunction(str) {
+    if (!str) return void (0);
+
+    var fn_body_idx = str.indexOf('{'),
+        fn_body = str.substring(fn_body_idx + 1, str.lastIndexOf('}')),
+        fn_declare = str.substring(0, fn_body_idx),
+        fn_params = fn_declare.substring(fn_declare.indexOf('(') + 1, fn_declare.lastIndexOf(')')),
+        args = fn_params.split(',');
+
+    args.push(fn_body);
+
+    function Fn() {
+        return Function.apply(this, args);
+    }
+    Fn.prototype = Function.prototype;
+
+    return new Fn();
+}
+
+window.onload = function () {
+    var configObject = JSON.parse('{"urls":[{"url":"v1/swagger.json","name":"P7CreateRestApi v1"}],"deepLinking":false,"persistAuthorization":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"tryItOutEnabled":false}');
+    var oauthConfigObject = JSON.parse('{"scopeSeparator":" ","scopes":[],"useBasicAuthenticationWithAccessCodeGrant":false,"usePkceWithAuthorizationCodeGrant":false}');
+
+    // Workaround for https://github.com/swagger-api/swagger-ui/issues/5945
+    configObject.urls.forEach(function (item) {
+        if (item.url.startsWith("http") || item.url.startsWith("/")) return;
+        item.url = window.location.href.replace("index.html", item.url).split('#')[0];
+    });
+
+    // If validatorUrl is not explicitly provided, disable the feature by setting to null
+    if (!configObject.hasOwnProperty("validatorUrl"))
+        configObject.validatorUrl = null
+
+    // If oauth2RedirectUrl isn't specified, use the built-in default
+    if (!configObject.hasOwnProperty("oauth2RedirectUrl"))
+        configObject.oauth2RedirectUrl = (new URL("oauth2-redirect.html", window.location.href)).href;
+
+    // Apply mandatory parameters
+    configObject.dom_id = "#swagger-ui";
+    configObject.presets = [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset];
+    configObject.layout = "StandaloneLayout";
+
+    // Parse and add interceptor functions
+    var interceptors = JSON.parse('{}');
+    if (interceptors.RequestInterceptorFunction)
+        configObject.requestInterceptor = parseFunction(interceptors.RequestInterceptorFunction);
+    if (interceptors.ResponseInterceptorFunction)
+        configObject.responseInterceptor = parseFunction(interceptors.ResponseInterceptorFunction);
+
+    if (configObject.plugins) {
+        configObject.plugins = configObject.plugins.map(eval);
+    }
+    
+    // Begin Swagger UI call region
+
+    const ui = SwaggerUIBundle(configObject);
+
+    ui.initOAuth(oauthConfigObject);
+
+    // End Swagger UI call region
+
+    window.ui = ui
+}
+
+Duration: 33,3132
+2025-03-27 18:36:06.459 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.js - 200 null application/javascript;charset=utf-8 67.4074ms
+2025-03-27 18:36:06.472 +01:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-03-27 18:36:06.472 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/index.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: text/css
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Content-Length: 202
+ResponseBody: html {
+    box-sizing: border-box;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    background: #fafafa;
+}
+
+Duration: 81,8498
+2025-03-27 18:36:06.472 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/index.css - 200 202 text/css 82.3164ms
+2025-03-27 18:36:06.472 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_framework/aspnetcore-browser-refresh.js - 200 16514 application/javascript; charset=utf-8 49.0468ms
+2025-03-27 18:36:06.478 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-03-27 18:36:06.479 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-03-27 18:36:06.480 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/swagger-ui-standalone-preset.js
+Accept: */*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: text/javascript
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Content-Length: 230007
+ResponseBody: /*! For license information please see swagger-ui-standalone-preset.js.LICENSE.txt */
+!function webpackUniversalModuleDefinition(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.SwaggerUIStandalonePreset=t():e.SwaggerUIStandalonePreset=t()}(this,(()=>(()=>{var e={2:(e,t,r)=>{var n=r(2199),i=r(4664),o=r(5950);e.exports=function getAllKeys(e){return n(e,o,i)}},79:(e,t,r)=>{var n=r(3702),i=r(80),o=r(4739),a=r(8655),s=r(1175);function ListCache(e){var t=-1,r=null==e?0:e.length;for(this.clear();++t<r;){var n=e[t];this.set(n[0],n[1])}}ListCache.prototype.clear=n,ListCache.prototype.delete=i,ListCache.prototype.get=o,ListCache.prototype.has=a,ListCache.prototype.set=s,e.exports=ListCache},80:(e,t,r)=>{var n=r(6025),i=Array.prototype.splice;e.exports=function listCacheDelete(e){var t=this.__data__,r=n(t,e);return!(r<0)&&(r==t.length-1?t.pop():i.call(t,r,1),--this.size,!0)}},104:(e,t,r)=>{var n=r(3661);function memoize(e,t){if("function"!=typeof e||null!=t&&"function"!=typeof t)throw new TypeError("Expected a function");var memoized=function(){var r=arguments,n=t?t.apply(this,r):r[0],i=memoized.cache;if(i.has(n))return i.get(n);var o=e.apply(this,r);return memoized.cache=i.set(n,o)||i,o};return memoized.cache=new(memoize.Cache||n),memoized}memoize.Cache=n,e.exports=memoize},251:(e,t)=>{t.read=function(e,t,r,n,i){var o,a,s=8*i-n-1,u=(1<<s)-1,c=u>>1,f=-7,l=r?i-1:0,h=r?-1:1,p=e[t+l];for(l+=h,o=p&(1<<-f)-1,p>>=-f,f+=s;f>0;o=256*o+e[t+l],l+=h,f-=8);for(a=o&(1<<-f)-1,o>>=-f,f+=n;f>0;a=256*a+e[t+l],l+=h,f-=8);if(0===o)o=1-c;else{if(o===u)return a?NaN:1/0*(p?-1:1);a+=Math.pow(2,n),o-=c}return(p?-1:1)*a*Math.pow(2,o-n)},t.write=function(e,t,r,n,i,o){var a,s,u,c=8*o-i-1,f=(1<<c)-1,l=f>>1,h=23===i?Math.pow(2,-24)-Math.pow(2,-77):0,p=n?0:o-1,d=n?1:-1,_=t<0||0===t&&1/t<0?1:0;for(t=Math.abs(t),isNaN(t)||t===1/0?(s=isNaN(t)?1:0,a=f):(a=Math.floor(Math.log(t)/Math.LN2),t*(u=Math.pow(2,-a))<1&&(a--,u*=2),(t+=a+l>=1?h/u:h*Math.pow(2,1-l))*u>=2&&(a++,u/=2),a+l>=f?(s=0,a=f):a+l>=1?(s=(t*u-1)*Math.pow(2,i),a+=l):(s=t*Math.pow(2,l-1)*Math.pow(2,i),a=0));i>=8;e[r+p]=255&s,p+=d,s/=256,i-=8);for(a=a<<i|s,c+=i;c>0;e[r+p]=255&a,p+=d,a/=256,c-=8);e[r+p-d]|=128*_}},270:(e,t,r)=>{var n=r(7068),i=r(346);e.exports=function baseIsEqual(e,t,r,o,a){return e===t||(null==e||null==t||!i(e)&&!i(t)?e!=e&&t!=t:n(e,t,r,o,baseIsEqual,a))}},289:(e,t,r)=>{var n=r(2651);e.exports=function mapCacheGet(e){return n(this,e).get(e)}},294:e=>{e.exports=function isLength(e){return"number"==typeof e&&e>-1&&e%1==0&&e<=9007199254740991}},317:e=>{e.exports=function mapToArray(e){var t=-1,r=Array(e.size);return e.forEach((function(e,n){r[++t]=[n,e]})),r}},346:e=>{e.exports=function isObjectLike(e){return null!=e&&"object"==typeof e}},361:e=>{var t=/^(?:0|[1-9]\d*)$/;e.exports=function isIndex(e,r){var n=typeof e;return!!(r=null==r?9007199254740991:r)&&("number"==n||"symbol"!=n&&t.test(e))&&e>-1&&e%1==0&&e<r}},376:e=>{"use strict";e.exports=["constructor","hasOwnProperty","isPrototypeOf","propertyIsEnumerable","toLocaleString","toString","valueOf"]},392:e=>{e.exports=function getValue(e,t){return null==e?void 0:e[t]}},462:(e,t,r)=>{"use strict";var n=r(975);e.exports=n},470:(e,t,r)=>{"use strict";var n=r(6028),i=r(5594);e.exports=function(e){var t=n(e,"string");return i(t)?t:t+""}},575:(e,t,r)=>{"use strict";var n=r(3121);e.exports=function(e){return n(e.length)}},581:(e,t,r)=>{"use strict";var n=r(3930),i=r(2250),o=r(6285),a=TypeError;e.exports=function(e,t){var r,s;if("string"===t&&i(r=e.toString)&&!o(s=n(r,e)))return s;if(i(r=e.valueOf)&&!o(s=n(r,e)))return s;if("string"!==t&&i(r=e.toString)&&!o(s=n(r,e)))return s;throw new a("Can't convert object to primitive value")}},583:(e,t,r)=>{var n=r(7237),i=r(7255),o=r(8586),a=r(7797);e.exports=function property(e){return o(e)?n(a(e)):i(e)}},631:(e,t,r)=>{var n=r(8077),i=r(9326);e.exports=function hasIn(e,t){return null!=e&&i(e,t,n)}},641:(e,t,r)=>{var n=r(6649),i=r(5950);e.exports=function baseForOwn(e,t){return e&&n(e,t,i)}},659:(e,t
+Duration: 89,7798
+2025-03-27 18:36:06.480 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/swagger-ui.css
+Accept: text/css,*/*;q=0.1
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: text/css
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Content-Length: 152035
+ResponseBody: .swagger-ui{color:#3b4151;font-family:sans-serif/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */}.swagger-ui html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.swagger-ui body{margin:0}.swagger-ui article,.swagger-ui aside,.swagger-ui footer,.swagger-ui header,.swagger-ui nav,.swagger-ui section{display:block}.swagger-ui h1{font-size:2em;margin:.67em 0}.swagger-ui figcaption,.swagger-ui figure,.swagger-ui main{display:block}.swagger-ui figure{margin:1em 40px}.swagger-ui hr{box-sizing:content-box;height:0;overflow:visible}.swagger-ui pre{font-family:monospace,monospace;font-size:1em}.swagger-ui a{background-color:transparent;-webkit-text-decoration-skip:objects}.swagger-ui abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}.swagger-ui b,.swagger-ui strong{font-weight:inherit;font-weight:bolder}.swagger-ui code,.swagger-ui kbd,.swagger-ui samp{font-family:monospace,monospace;font-size:1em}.swagger-ui dfn{font-style:italic}.swagger-ui mark{background-color:#ff0;color:#000}.swagger-ui small{font-size:80%}.swagger-ui sub,.swagger-ui sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}.swagger-ui sub{bottom:-.25em}.swagger-ui sup{top:-.5em}.swagger-ui audio,.swagger-ui video{display:inline-block}.swagger-ui audio:not([controls]){display:none;height:0}.swagger-ui img{border-style:none}.swagger-ui svg:not(:root){overflow:hidden}.swagger-ui button,.swagger-ui input,.swagger-ui optgroup,.swagger-ui select,.swagger-ui textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}.swagger-ui button,.swagger-ui input{overflow:visible}.swagger-ui button,.swagger-ui select{text-transform:none}.swagger-ui [type=reset],.swagger-ui [type=submit],.swagger-ui button,.swagger-ui html [type=button]{-webkit-appearance:button}.swagger-ui [type=button]::-moz-focus-inner,.swagger-ui [type=reset]::-moz-focus-inner,.swagger-ui [type=submit]::-moz-focus-inner,.swagger-ui button::-moz-focus-inner{border-style:none;padding:0}.swagger-ui [type=button]:-moz-focusring,.swagger-ui [type=reset]:-moz-focusring,.swagger-ui [type=submit]:-moz-focusring,.swagger-ui button:-moz-focusring{outline:1px dotted ButtonText}.swagger-ui fieldset{padding:.35em .75em .625em}.swagger-ui legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}.swagger-ui progress{display:inline-block;vertical-align:baseline}.swagger-ui textarea{overflow:auto}.swagger-ui [type=checkbox],.swagger-ui [type=radio]{box-sizing:border-box;padding:0}.swagger-ui [type=number]::-webkit-inner-spin-button,.swagger-ui [type=number]::-webkit-outer-spin-button{height:auto}.swagger-ui [type=search]{-webkit-appearance:textfield;outline-offset:-2px}.swagger-ui [type=search]::-webkit-search-cancel-button,.swagger-ui [type=search]::-webkit-search-decoration{-webkit-appearance:none}.swagger-ui ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}.swagger-ui details,.swagger-ui menu{display:block}.swagger-ui summary{display:list-item}.swagger-ui canvas{display:inline-block}.swagger-ui [hidden],.swagger-ui template{display:none}.swagger-ui .debug *{outline:1px solid gold}.swagger-ui .debug-white *{outline:1px solid #fff}.swagger-ui .debug-black *{outline:1px solid #000}.swagger-ui .debug-grid{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5
+Duration: 93,2933
+2025-03-27 18:36:06.480 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 90.4304ms
+2025-03-27 18:36:06.480 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui.css - 200 152035 text/css 93.9236ms
+2025-03-27 18:36:06.492 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-03-27 18:36:06.492 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/swagger-ui-bundle.js
+Accept: */*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: text/javascript
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Content-Length: 1457477
+ResponseBody: /*! For license information please see swagger-ui-bundle.js.LICENSE.txt */
+!function webpackUniversalModuleDefinition(s,o){"object"==typeof exports&&"object"==typeof module?module.exports=o():"function"==typeof define&&define.amd?define([],o):"object"==typeof exports?exports.SwaggerUIBundle=o():s.SwaggerUIBundle=o()}(this,(()=>(()=>{var s={251:(s,o)=>{o.read=function(s,o,i,a,u){var _,w,x=8*u-a-1,C=(1<<x)-1,j=C>>1,L=-7,B=i?u-1:0,$=i?-1:1,V=s[o+B];for(B+=$,_=V&(1<<-L)-1,V>>=-L,L+=x;L>0;_=256*_+s[o+B],B+=$,L-=8);for(w=_&(1<<-L)-1,_>>=-L,L+=a;L>0;w=256*w+s[o+B],B+=$,L-=8);if(0===_)_=1-j;else{if(_===C)return w?NaN:1/0*(V?-1:1);w+=Math.pow(2,a),_-=j}return(V?-1:1)*w*Math.pow(2,_-a)},o.write=function(s,o,i,a,u,_){var w,x,C,j=8*_-u-1,L=(1<<j)-1,B=L>>1,$=23===u?Math.pow(2,-24)-Math.pow(2,-77):0,V=a?0:_-1,U=a?1:-1,z=o<0||0===o&&1/o<0?1:0;for(o=Math.abs(o),isNaN(o)||o===1/0?(x=isNaN(o)?1:0,w=L):(w=Math.floor(Math.log(o)/Math.LN2),o*(C=Math.pow(2,-w))<1&&(w--,C*=2),(o+=w+B>=1?$/C:$*Math.pow(2,1-B))*C>=2&&(w++,C/=2),w+B>=L?(x=0,w=L):w+B>=1?(x=(o*C-1)*Math.pow(2,u),w+=B):(x=o*Math.pow(2,B-1)*Math.pow(2,u),w=0));u>=8;s[i+V]=255&x,V+=U,x/=256,u-=8);for(w=w<<u|x,j+=u;j>0;s[i+V]=255&w,V+=U,w/=256,j-=8);s[i+V-U]|=128*z}},462:(s,o,i)=>{"use strict";var a=i(40975);s.exports=a},659:(s,o,i)=>{var a=i(51873),u=Object.prototype,_=u.hasOwnProperty,w=u.toString,x=a?a.toStringTag:void 0;s.exports=function getRawTag(s){var o=_.call(s,x),i=s[x];try{s[x]=void 0;var a=!0}catch(s){}var u=w.call(s);return a&&(o?s[x]=i:delete s[x]),u}},694:(s,o,i)=>{"use strict";i(91599);var a=i(37257);i(12560),s.exports=a},953:(s,o,i)=>{"use strict";s.exports=i(53375)},1733:s=>{var o=/[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g;s.exports=function asciiWords(s){return s.match(o)||[]}},1882:(s,o,i)=>{var a=i(72552),u=i(23805);s.exports=function isFunction(s){if(!u(s))return!1;var o=a(s);return"[object Function]"==o||"[object GeneratorFunction]"==o||"[object AsyncFunction]"==o||"[object Proxy]"==o}},1907:(s,o,i)=>{"use strict";var a=i(41505),u=Function.prototype,_=u.call,w=a&&u.bind.bind(_,_);s.exports=a?w:function(s){return function(){return _.apply(s,arguments)}}},2205:function(s,o,i){var a;a=void 0!==i.g?i.g:this,s.exports=function(s){if(s.CSS&&s.CSS.escape)return s.CSS.escape;var cssEscape=function(s){if(0==arguments.length)throw new TypeError("`CSS.escape` requires an argument.");for(var o,i=String(s),a=i.length,u=-1,_="",w=i.charCodeAt(0);++u<a;)0!=(o=i.charCodeAt(u))?_+=o>=1&&o<=31||127==o||0==u&&o>=48&&o<=57||1==u&&o>=48&&o<=57&&45==w?"\\"+o.toString(16)+" ":0==u&&1==a&&45==o||!(o>=128||45==o||95==o||o>=48&&o<=57||o>=65&&o<=90||o>=97&&o<=122)?"\\"+i.charAt(u):i.charAt(u):_+="�";return _};return s.CSS||(s.CSS={}),s.CSS.escape=cssEscape,cssEscape}(a)},2209:(s,o,i)=>{"use strict";var a,u=i(9404),_=function productionTypeChecker(){invariant(!1,"ImmutablePropTypes type checking code is stripped in production.")};_.isRequired=_;var w=function getProductionTypeChecker(){return _};function getPropType(s){var o=typeof s;return Array.isArray(s)?"array":s instanceof RegExp?"object":s instanceof u.Iterable?"Immutable."+s.toSource().split(" ")[0]:o}function createChainableTypeChecker(s){function checkType(o,i,a,u,_,w){for(var x=arguments.length,C=Array(x>6?x-6:0),j=6;j<x;j++)C[j-6]=arguments[j];return w=w||a,u=u||"<<anonymous>>",null!=i[a]?s.apply(void 0,[i,a,u,_,w].concat(C)):o?new Error("Required "+_+" `"+w+"` was not specified in `"+u+"`."):void 0}var o=checkType.bind(null,!1);return o.isRequired=checkType.bind(null,!0),o}function createIterableSubclassTypeChecker(s,o){return function createImmutableTypeChecker(s,o){return createChainableTypeChecker((function validate(i,a,u,_,w){var x=i[a];if(!o(x)){var C=getPropType(x);return new Error("Invalid "+_+" `"+w+"` of type `"+C+"` supplied to `"+u+"`, expected `"+s+"`.")}return null}))}("Iterable."+s,(function(s){return u.Iterable.isIterable(s)&&o(s)}))}(a={listOf:w,mapOf:w,orderedMapOf:w,setOf:w,orderedSetOf:w,stackOf:w,iterableOf:w,recordOf:w,shape:w,contains:w,mapContains:w,orderedMapContains:w,list:_,map:_,orderedMap:_,set:_,o
+Duration: 102,3157
+2025-03-27 18:36:06.492 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/swagger-ui-bundle.js - 200 1457477 text/javascript 102.7104ms
+2025-03-27 18:36:06.498 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.8043ms
+2025-03-27 18:36:06.623 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - null null
+2025-03-27 18:36:06.623 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7210/swagger/favicon-32x32.png - null null
+2025-03-27 18:36:06.623 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-03-27 18:36:06.623 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/favicon-32x32.png
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: image/png
+Accept-Ranges: bytes
+ETag: [Redacted]
+Last-Modified: Wed, 26 Feb 2025 11:16:10 GMT
+Content-Length: 628
+Duration: 0,4712
+2025-03-27 18:36:06.623 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/favicon-32x32.png - 200 628 image/png 0.7602ms
+2025-03-27 18:36:06.640 +01:00 [INF] Request and Response:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /swagger/v1/swagger.json
+Accept: application/json,*/*
+Host: localhost:7210
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Referer: [Redacted]
+sec-ch-ua-platform: [Redacted]
+sec-ch-ua: "Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"
+sec-ch-ua-mobile: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-dest: [Redacted]
+priority: [Redacted]
+StatusCode: 200
+Content-Type: application/json;charset=utf-8
+ResponseBody: {
+  "openapi": "3.0.1",
+  "info": {
+    "title": "P7CreateRestApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/BidLists": {
+      "get": {
+        "tags": [
+          "BidLists"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BidList"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "BidLists"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/BidLists/{id}": {
+      "get": {
+        "tags": [
+          "BidLists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BidList"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "BidLists"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BidListDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+Duration: 17,3038
+2025-03-27 18:36:06.640 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7210/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.7439ms
+2025-03-27 18:36:30.204 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/Login/login - application/json 55
+2025-03-27 18:36:30.206 +01:00 [INF] Executing endpoint 'Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi)'
+2025-03-27 18:36:30.220 +01:00 [INF] Route matched with {action = "Login", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(P7CreateRestApi.Models.LoginModel) on controller Dot.Net.WebApi.Controllers.LoginController (P7CreateRestApi).
+2025-03-27 18:36:32.313 +01:00 [INF] Executed DbCommand (35ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-03-27 18:36:32.457 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-27 18:36:32.480 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-27 18:36:32.484 +01:00 [INF] Executed action Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi) in 2262.1703ms
+2025-03-27 18:36:32.485 +01:00 [INF] Executed endpoint 'Dot.Net.WebApi.Controllers.LoginController.Login (P7CreateRestApi)'
+2025-03-27 18:36:32.485 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /Login/login
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 55
+Postman-Token: [Redacted]
+StatusCode: 200
+Content-Type: text/plain; charset=utf-8
+RequestBody: {
+  "username": "Admin",
+  "password": "Admin!123"
+}
+RequestBodyStatus: [Completed]
+ResponseBody: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQzMDk3ODkyLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MjEwIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIxMCJ9.fVEFdQKrMCKJHsagstigjmVuaPww_8wgKmP0iqcvmnM
+Duration: 2280,061
+2025-03-27 18:36:32.489 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/Login/login - 200 null text/plain; charset=utf-8 2284.5698ms
+2025-03-27 18:36:53.842 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/BidLists - null null
+2025-03-27 18:36:53.898 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-27 18:36:53.910 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2025-03-27 18:36:53.915 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Technician|Visitor)
+2025-03-27 18:36:53.917 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-27 18:36:53.917 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+Duration: 74,8864
+2025-03-27 18:36:53.917 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/BidLists - 401 0 null 75.4369ms
+2025-03-27 18:36:59.646 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/BidLists - null null
+2025-03-27 18:36:59.671 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-27 18:36:59.671 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2025-03-27 18:36:59.671 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Technician|Visitor)
+2025-03-27 18:36:59.672 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-27 18:36:59.672 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+Duration: 24,7602
+2025-03-27 18:36:59.672 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/BidLists - 401 0 null 25.7881ms
+2025-03-27 18:37:17.115 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/BidLists - null null
+2025-03-27 18:37:17.137 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-27 18:37:17.138 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2025-03-27 18:37:17.139 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Technician|Visitor)
+2025-03-27 18:37:17.139 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-27 18:37:17.139 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+Duration: 23,7668
+2025-03-27 18:37:17.139 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/BidLists - 401 0 null 24.1304ms
+2025-03-27 18:37:38.568 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/BidLists - null null
+2025-03-27 18:37:38.590 +01:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoder.Decode(ReadOnlySpan`1 strSpan, Span`1 output)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2025-03-27 18:37:38.590 +01:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2025-03-27 18:37:38.590 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Technician|Visitor)
+2025-03-27 18:37:38.590 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-27 18:37:38.590 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+Duration: 22,0517
+2025-03-27 18:37:38.590 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/BidLists - 401 0 null 22.4784ms
+2025-03-27 18:37:55.470 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/BidLists - null null
+2025-03-27 18:37:55.493 +01:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.BidListsController.GetBids (P7CreateRestApi)'
+2025-03-27 18:37:55.496 +01:00 [INF] Route matched with {action = "GetBids", controller = "BidLists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Dot.Net.WebApi.Domain.BidList]]] GetBids() on controller P7CreateRestApi.Controllers.BidListsController (P7CreateRestApi).
+2025-03-27 18:37:55.627 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+2025-03-27 18:37:55.656 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Dot.Net.WebApi.Domain.BidList, P7CreateRestApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 18:37:55.666 +01:00 [INF] Executed action P7CreateRestApi.Controllers.BidListsController.GetBids (P7CreateRestApi) in 169.8344ms
+2025-03-27 18:37:55.666 +01:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.BidListsController.GetBids (P7CreateRestApi)'
+2025-03-27 18:37:55.666 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+ResponseBody: [{"bidListId":1,"account":"string","bidType":"string","bidQuantity":0.01,"askQuantity":0.01,"bid":0.01,"ask":0.01,"benchmark":"string","bidListDate":"2025-03-11T18:08:31.867","commentary":"string","bidSecurity":"string","bidStatus":"string","trader":"string","book":"string","creationName":"string","creationDate":"2025-03-11T18:08:31.867","revisionName":"string","revisionDate":"2025-03-11T18:08:31.867","dealName":"string","dealType":"string","sourceListId":"string","side":"string"},{"bidListId":2,"account":"Jean Compte","bidType":"Limit","bidQuantity":200,"askQuantity":150,"bid":102.5,"ask":103.5,"benchmark":"Benchmark JC","bidListDate":"2025-03-11T18:08:31.867","commentary":"New BidList creation","bidSecurity":"Security JC","bidStatus":"Pending","trader":"Jean Trader","book":"Book JT","creationName":"Jean Createur","creationDate":"2025-03-11T18:08:31.867","revisionName":"Reviser JC","revisionDate":"2025-03-11T18:08:31.867","dealName":"Deal Jean","dealType":"Type 12","sourceListId":"Source 12","side":"Sell"},{"bidListId":3,"account":"Jean Compte","bidType":"Limit","bidQuantity":200,"askQuantity":150,"bid":102.5,"ask":103.5,"benchmark":"Benchmark JC","bidListDate":"2025-03-11T18:08:31.867","commentary":"New BidList creation","bidSecurity":"Security JC","bidStatus":"Pending","trader":"Jean Trader","book":"Book JT","creationName":"Jean Createur","creationDate":"2025-03-11T18:08:31.867","revisionName":"Reviser JC","revisionDate":"2025-03-11T18:08:31.867","dealName":"Deal Jean","dealType":"Type 12","sourceListId":"Source 12","side":"Sell"}]
+Duration: 195,484
+2025-03-27 18:37:55.666 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/BidLists - 200 null application/json; charset=utf-8 196.221ms
+2025-03-27 18:39:23.206 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/BidLists - application/json 674
+2025-03-27 18:39:23.248 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/03/2025 18:29:10', Current time (UTC): '27/03/2025 17:39:23'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-03-27 18:39:23.248 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/03/2025 18:29:10', Current time (UTC): '27/03/2025 17:39:23'.
+2025-03-27 18:39:23.249 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Technician)
+2025-03-27 18:39:23.249 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-27 18:39:23.249 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 674
+Postman-Token: [Redacted]
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+RequestBody: 
+RequestBodyStatus: [Not consumed by app]
+Duration: 42,4448
+2025-03-27 18:39:23.249 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/BidLists - 401 0 null 104.1556ms
+2025-03-27 18:39:29.677 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/BidLists - application/json 674
+2025-03-27 18:39:29.678 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Technician)
+2025-03-27 18:39:29.678 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-27 18:39:29.678 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+Content-Length: 674
+Postman-Token: [Redacted]
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+RequestBody: 
+RequestBodyStatus: [Not consumed by app]
+Duration: 0,2313
+2025-03-27 18:39:29.678 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/BidLists - 401 0 null 0.5197ms
+2025-03-27 18:40:06.916 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/BidLists - null null
+2025-03-27 18:40:06.916 +01:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Technician|Visitor)
+2025-03-27 18:40:06.917 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-03-27 18:40:06.917 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Postman-Token: [Redacted]
+StatusCode: 401
+WWW-Authenticate: [Redacted]
+Duration: 0,2041
+2025-03-27 18:40:06.917 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/BidLists - 401 0 null 1.8665ms
+2025-03-27 18:40:36.709 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7210/api/BidLists - null null
+2025-03-27 18:40:36.710 +01:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.BidListsController.GetBids (P7CreateRestApi)'
+2025-03-27 18:40:36.710 +01:00 [INF] Route matched with {action = "GetBids", controller = "BidLists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Dot.Net.WebApi.Domain.BidList]]] GetBids() on controller P7CreateRestApi.Controllers.BidListsController (P7CreateRestApi).
+2025-03-27 18:40:36.719 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[BidListId], [b].[Account], [b].[Ask], [b].[AskQuantity], [b].[Benchmark], [b].[Bid], [b].[BidListDate], [b].[BidQuantity], [b].[BidSecurity], [b].[BidStatus], [b].[BidType], [b].[Book], [b].[Commentary], [b].[CreationDate], [b].[CreationName], [b].[DealName], [b].[DealType], [b].[RevisionDate], [b].[RevisionName], [b].[Side], [b].[SourceListId], [b].[Trader]
+FROM [Bids] AS [b]
+2025-03-27 18:40:36.719 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Dot.Net.WebApi.Domain.BidList, P7CreateRestApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-27 18:40:36.720 +01:00 [INF] Executed action P7CreateRestApi.Controllers.BidListsController.GetBids (P7CreateRestApi) in 9.5718ms
+2025-03-27 18:40:36.720 +01:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.BidListsController.GetBids (P7CreateRestApi)'
+2025-03-27 18:40:36.720 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Postman-Token: [Redacted]
+StatusCode: 200
+Content-Type: application/json; charset=utf-8
+ResponseBody: [{"bidListId":1,"account":"string","bidType":"string","bidQuantity":0.01,"askQuantity":0.01,"bid":0.01,"ask":0.01,"benchmark":"string","bidListDate":"2025-03-11T18:08:31.867","commentary":"string","bidSecurity":"string","bidStatus":"string","trader":"string","book":"string","creationName":"string","creationDate":"2025-03-11T18:08:31.867","revisionName":"string","revisionDate":"2025-03-11T18:08:31.867","dealName":"string","dealType":"string","sourceListId":"string","side":"string"},{"bidListId":2,"account":"Jean Compte","bidType":"Limit","bidQuantity":200,"askQuantity":150,"bid":102.5,"ask":103.5,"benchmark":"Benchmark JC","bidListDate":"2025-03-11T18:08:31.867","commentary":"New BidList creation","bidSecurity":"Security JC","bidStatus":"Pending","trader":"Jean Trader","book":"Book JT","creationName":"Jean Createur","creationDate":"2025-03-11T18:08:31.867","revisionName":"Reviser JC","revisionDate":"2025-03-11T18:08:31.867","dealName":"Deal Jean","dealType":"Type 12","sourceListId":"Source 12","side":"Sell"},{"bidListId":3,"account":"Jean Compte","bidType":"Limit","bidQuantity":200,"askQuantity":150,"bid":102.5,"ask":103.5,"benchmark":"Benchmark JC","bidListDate":"2025-03-11T18:08:31.867","commentary":"New BidList creation","bidSecurity":"Security JC","bidStatus":"Pending","trader":"Jean Trader","book":"Book JT","creationName":"Jean Createur","creationDate":"2025-03-11T18:08:31.867","revisionName":"Reviser JC","revisionDate":"2025-03-11T18:08:31.867","dealName":"Deal Jean","dealType":"Type 12","sourceListId":"Source 12","side":"Sell"}]
+Duration: 10,3367
+2025-03-27 18:40:36.720 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7210/api/BidLists - 200 null application/json; charset=utf-8 13.4924ms
+2025-03-27 18:40:39.804 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7210/api/BidLists - application/json 674
+2025-03-27 18:40:39.804 +01:00 [INF] Executing endpoint 'P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi)'
+2025-03-27 18:40:39.806 +01:00 [INF] Route matched with {action = "PostBidList", controller = "BidLists"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Dot.Net.WebApi.Domain.BidList]] PostBidList(P7CreateRestApi.Model.BidListDTO) on controller P7CreateRestApi.Controllers.BidListsController (P7CreateRestApi).
+2025-03-27 18:40:39.889 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Double), @p2='?' (DbType = Double), @p3='?' (Size = 50), @p4='?' (DbType = Double), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Double), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = DateTime2), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Bids] ([Account], [Ask], [AskQuantity], [Benchmark], [Bid], [BidListDate], [BidQuantity], [BidSecurity], [BidStatus], [BidType], [Book], [Commentary], [CreationDate], [CreationName], [DealName], [DealType], [RevisionDate], [RevisionName], [Side], [SourceListId], [Trader])
+OUTPUT INSERTED.[BidListId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2025-03-27 18:40:40.163 +01:00 [ERR] An exception occurred in the database while saving changes for context type 'Dot.Net.WebApi.Data.LocalDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Benchmark', table 'Findexium.dbo.Bids'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:6eaeea04-2af1-406f-abc6-7e43f2cb8b1f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Benchmark', table 'Findexium.dbo.Bids'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:6eaeea04-2af1-406f-abc6-7e43f2cb8b1f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-03-27 18:40:40.569 +01:00 [INF] Executed action P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi) in 763.1346ms
+2025-03-27 18:40:40.673 +01:00 [INF] Executed endpoint 'P7CreateRestApi.Controllers.BidListsController.PostBidList (P7CreateRestApi)'
+2025-03-27 18:40:40.732 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Benchmark', table 'Findexium.dbo.Bids'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:6eaeea04-2af1-406f-abc6-7e43f2cb8b1f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at P7CreateRestApi.Repositories.BidListRepository.CreateBidListAsync(BidList bidList) in C:\Users\Dany\source\repos\Projet 7 - Back-end.NET_API_REST-main\P7CreateRestApi\Repositories\BidListRepository.cs:line 29
+   at P7CreateRestApi.Controllers.BidListsController.PostBidList(BidListDTO bidListDTO) in C:\Users\Dany\source\repos\Projet 7 - Back-end.NET_API_REST-main\P7CreateRestApi\Controllers\BidListsController.cs:line 88
+   at lambda_method304(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-03-27 18:40:41.292 +01:00 [INF] Request and Response:
+Protocol: HTTP/1.1
+Method: POST
+Scheme: https
+PathBase: 
+Path: /api/BidLists
+Accept: */*
+Connection: keep-alive
+Host: localhost:7210
+User-Agent: PostmanRuntime/7.43.0
+Accept-Encoding: gzip, deflate, br
+Authorization: [Redacted]
+Content-Type: application/json
+Content-Length: 674
+Postman-Token: [Redacted]
+StatusCode: 404
+RequestBody: {
+    "Account": "Test Bid",
+    "BidType": "Limit",
+    "BidQuantity": 111,
+    "AskQuantity": 12,
+    "Bid": 102.5,
+    "Ask": 103.5,
+    "Benchmark": "Benchmark Test",
+    "BidListDate": "2025-03-11T18:08:31.867Z",
+    "Commentary": "New BidList creation",
+    "BidSecurity": "Security Test",
+    "BidStatus": "Pending",
+    "Trader": "Jean Trader",
+    "Book": "Book JT",
+    "CreationName": "Jean Createur",
+    "CreationDate": "2025-03-11T18:08:31.867Z",
+    "RevisionName": "Reviser JC",
+    "RevisionDate": "2025-03-11T18:08:31.867Z",
+    "DealName": "Deal Test",
+    "DealType": "Type 12",
+    "SourceListId": "Source 12",
+    "Side": "Sell"
+}
+RequestBodyStatus: [Completed]
+Duration: 1488,3206
+2025-03-27 18:40:41.475 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The exception handler configured on ExceptionHandlerOptions produced a 404 status response. This InvalidOperationException containing the original exception was thrown since this is often due to a misconfigured ExceptionHandlingPath. If the exception handler is expected to return 404 status responses then set AllowStatusCode404Response to true.
+ ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Benchmark', table 'Findexium.dbo.Bids'; column does not allow nulls. INSERT fails.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:6eaeea04-2af1-406f-abc6-7e43f2cb8b1f
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at P7CreateRestApi.Repositories.BidListRepository.CreateBidListAsync(BidList bidList) in C:\Users\Dany\source\repos\Projet 7 - Back-end.NET_API_REST-main\P7CreateRestApi\Repositories\BidListRepository.cs:line 29
+   at P7CreateRestApi.Controllers.BidListsController.PostBidList(BidListDTO bidListDTO) in C:\Users\Dany\source\repos\Projet 7 - Back-end.NET_API_REST-main\P7CreateRestApi\Controllers\BidListsController.cs:line 88
+   at lambda_method304(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.HandleException(HttpContext context, ExceptionDispatchInfo edi)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware.InvokeInternal(HttpContext context, HttpLoggingOptions options, HttpLoggingAttribute loggingAttribute, HttpLoggingFields loggingFields)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-27 18:40:41.482 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7210/api/BidLists - 500 null text/plain; charset=utf-8 1678.3182ms
+2025-03-27 18:40:41.482 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST https://localhost:7210/api/BidLists, Response status code: 500
+2025-03-27 18:47:29.931 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 18:47:29.953 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-27 18:47:29.969 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-03-27 18:47:30.002 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-03-27 18:47:30.006 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 18:47:30.006 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-27 18:47:30.008 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-27 18:47:30.013 +01:00 [INF] Applying migration '20250327174646_ModificationEntiteBidList'.
+2025-03-27 18:47:30.069 +01:00 [ERR] Failed executing DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var sysname;
+SELECT @var = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Trades]') AND [c].[name] = N'TradeDate');
+IF @var IS NOT NULL EXEC(N'ALTER TABLE [Trades] DROP CONSTRAINT [' + @var + '];');
+ALTER TABLE [Trades] ALTER COLUMN [TradeDate] datetime2 NULL;
+2025-03-27 18:50:52.334 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 18:50:52.365 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-27 18:50:52.371 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-27 18:51:19.370 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 18:51:19.391 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-27 18:51:19.402 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-03-27 18:51:19.436 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-03-27 18:51:19.439 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 18:51:19.439 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-27 18:51:19.441 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-27 18:51:19.446 +01:00 [INF] Applying migration '20250327175108_ModificationEntiteBidList'.
+2025-03-27 18:51:19.485 +01:00 [ERR] Failed executing DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var sysname;
+SELECT @var = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Trades]') AND [c].[name] = N'TradeDate');
+IF @var IS NOT NULL EXEC(N'ALTER TABLE [Trades] DROP CONSTRAINT [' + @var + '];');
+ALTER TABLE [Trades] ALTER COLUMN [TradeDate] datetime2 NULL;
+2025-03-27 18:55:09.914 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 18:55:09.937 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-27 18:55:09.946 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-03-27 18:55:09.979 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-03-27 18:55:09.983 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 18:55:09.983 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-27 18:55:09.985 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-27 18:55:09.989 +01:00 [INF] Applying migration '20250225163625_InitialCreate'.
+2025-03-27 18:55:10.002 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Bids] (
+    [BidListId] int NOT NULL IDENTITY,
+    [Account] nvarchar(max) NOT NULL,
+    [BidType] nvarchar(max) NOT NULL,
+    [BidQuantity] float NULL,
+    [AskQuantity] float NULL,
+    [Bid] float NULL,
+    [Ask] float NULL,
+    [Benchmark] nvarchar(max) NOT NULL,
+    [BidListDate] datetime2 NULL,
+    [Commentary] nvarchar(max) NOT NULL,
+    [BidSecurity] nvarchar(max) NOT NULL,
+    [BidStatus] nvarchar(max) NOT NULL,
+    [Trader] nvarchar(max) NOT NULL,
+    [Book] nvarchar(max) NOT NULL,
+    [CreationName] nvarchar(max) NOT NULL,
+    [CreationDate] datetime2 NULL,
+    [RevisionName] nvarchar(max) NOT NULL,
+    [RevisionDate] datetime2 NULL,
+    [DealName] nvarchar(max) NOT NULL,
+    [DealType] nvarchar(max) NOT NULL,
+    [SourceListId] nvarchar(max) NOT NULL,
+    [Side] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Bids] PRIMARY KEY ([BidListId])
+);
+2025-03-27 18:55:10.002 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [CurvePoints] (
+    [Id] int NOT NULL IDENTITY,
+    [CurveId] tinyint NULL,
+    [AsOfDate] datetime2 NULL,
+    [Term] float NULL,
+    [CurvePointValue] float NULL,
+    [CreationDate] datetime2 NULL,
+    CONSTRAINT [PK_CurvePoints] PRIMARY KEY ([Id])
+);
+2025-03-27 18:55:10.003 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Ratings] (
+    [Id] int NOT NULL IDENTITY,
+    [MoodysRating] nvarchar(max) NOT NULL,
+    [SandPRating] nvarchar(max) NOT NULL,
+    [FitchRating] nvarchar(max) NOT NULL,
+    [OrderNumber] tinyint NULL,
+    CONSTRAINT [PK_Ratings] PRIMARY KEY ([Id])
+);
+2025-03-27 18:55:10.004 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Rules] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [JSon] nvarchar(max) NOT NULL,
+    [Template] nvarchar(max) NOT NULL,
+    [SqlStr] nvarchar(max) NOT NULL,
+    [SqlPart] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Rules] PRIMARY KEY ([Id])
+);
+2025-03-27 18:55:10.005 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Trades] (
+    [TradeId] int NOT NULL IDENTITY,
+    [Account] nvarchar(max) NOT NULL,
+    [AccountType] nvarchar(max) NOT NULL,
+    [BuyQuantity] float NULL,
+    [SellQuantity] float NULL,
+    [BuyPrice] float NULL,
+    [SellPrice] float NULL,
+    [TradeDate] float NULL,
+    [TradeSecurity] nvarchar(max) NOT NULL,
+    [TradeStatus] nvarchar(max) NOT NULL,
+    [Trader] nvarchar(max) NOT NULL,
+    [Benchmark] nvarchar(max) NOT NULL,
+    [Book] nvarchar(max) NOT NULL,
+    [CreationName] nvarchar(max) NOT NULL,
+    [CreationDate] datetime2 NULL,
+    [RevisionName] nvarchar(max) NOT NULL,
+    [RevisionDate] datetime2 NULL,
+    [DealName] nvarchar(max) NOT NULL,
+    [DealType] nvarchar(max) NOT NULL,
+    [SourceListId] nvarchar(max) NOT NULL,
+    [Side] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Trades] PRIMARY KEY ([TradeId])
+);
+2025-03-27 18:55:10.005 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [UserName] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Fullname] nvarchar(max) NOT NULL,
+    [Role] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-03-27 18:55:10.006 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250225163625_InitialCreate', N'9.0.2');
+2025-03-27 18:55:10.007 +01:00 [INF] Applying migration '20250327175108_ModificationEntiteBidList'.
+2025-03-27 18:55:10.051 +01:00 [ERR] Failed executing DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var sysname;
+SELECT @var = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Trades]') AND [c].[name] = N'TradeDate');
+IF @var IS NOT NULL EXEC(N'ALTER TABLE [Trades] DROP CONSTRAINT [' + @var + '];');
+ALTER TABLE [Trades] ALTER COLUMN [TradeDate] datetime2 NULL;
+2025-03-27 18:56:27.913 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 18:56:27.941 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-27 18:56:27.946 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-27 19:03:38.523 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 19:03:38.545 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-27 19:03:38.552 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-03-27 19:03:38.585 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-03-27 19:03:38.588 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 19:03:38.589 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-27 19:03:38.590 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-27 19:03:38.594 +01:00 [INF] Applying migration '20250225163625_InitialCreate'.
+2025-03-27 19:03:38.607 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Bids] (
+    [BidListId] int NOT NULL IDENTITY,
+    [Account] nvarchar(max) NOT NULL,
+    [BidType] nvarchar(max) NOT NULL,
+    [BidQuantity] float NULL,
+    [AskQuantity] float NULL,
+    [Bid] float NULL,
+    [Ask] float NULL,
+    [Benchmark] nvarchar(max) NOT NULL,
+    [BidListDate] datetime2 NULL,
+    [Commentary] nvarchar(max) NOT NULL,
+    [BidSecurity] nvarchar(max) NOT NULL,
+    [BidStatus] nvarchar(max) NOT NULL,
+    [Trader] nvarchar(max) NOT NULL,
+    [Book] nvarchar(max) NOT NULL,
+    [CreationName] nvarchar(max) NOT NULL,
+    [CreationDate] datetime2 NULL,
+    [RevisionName] nvarchar(max) NOT NULL,
+    [RevisionDate] datetime2 NULL,
+    [DealName] nvarchar(max) NOT NULL,
+    [DealType] nvarchar(max) NOT NULL,
+    [SourceListId] nvarchar(max) NOT NULL,
+    [Side] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Bids] PRIMARY KEY ([BidListId])
+);
+2025-03-27 19:03:38.607 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [CurvePoints] (
+    [Id] int NOT NULL IDENTITY,
+    [CurveId] tinyint NULL,
+    [AsOfDate] datetime2 NULL,
+    [Term] float NULL,
+    [CurvePointValue] float NULL,
+    [CreationDate] datetime2 NULL,
+    CONSTRAINT [PK_CurvePoints] PRIMARY KEY ([Id])
+);
+2025-03-27 19:03:38.608 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Ratings] (
+    [Id] int NOT NULL IDENTITY,
+    [MoodysRating] nvarchar(max) NOT NULL,
+    [SandPRating] nvarchar(max) NOT NULL,
+    [FitchRating] nvarchar(max) NOT NULL,
+    [OrderNumber] tinyint NULL,
+    CONSTRAINT [PK_Ratings] PRIMARY KEY ([Id])
+);
+2025-03-27 19:03:38.608 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Rules] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NOT NULL,
+    [JSon] nvarchar(max) NOT NULL,
+    [Template] nvarchar(max) NOT NULL,
+    [SqlStr] nvarchar(max) NOT NULL,
+    [SqlPart] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Rules] PRIMARY KEY ([Id])
+);
+2025-03-27 19:03:38.609 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Trades] (
+    [TradeId] int NOT NULL IDENTITY,
+    [Account] nvarchar(max) NOT NULL,
+    [AccountType] nvarchar(max) NOT NULL,
+    [BuyQuantity] float NULL,
+    [SellQuantity] float NULL,
+    [BuyPrice] float NULL,
+    [SellPrice] float NULL,
+    [TradeDate] float NULL,
+    [TradeSecurity] nvarchar(max) NOT NULL,
+    [TradeStatus] nvarchar(max) NOT NULL,
+    [Trader] nvarchar(max) NOT NULL,
+    [Benchmark] nvarchar(max) NOT NULL,
+    [Book] nvarchar(max) NOT NULL,
+    [CreationName] nvarchar(max) NOT NULL,
+    [CreationDate] datetime2 NULL,
+    [RevisionName] nvarchar(max) NOT NULL,
+    [RevisionDate] datetime2 NULL,
+    [DealName] nvarchar(max) NOT NULL,
+    [DealType] nvarchar(max) NOT NULL,
+    [SourceListId] nvarchar(max) NOT NULL,
+    [Side] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Trades] PRIMARY KEY ([TradeId])
+);
+2025-03-27 19:03:38.609 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [UserName] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Fullname] nvarchar(max) NOT NULL,
+    [Role] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-03-27 19:03:38.610 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250225163625_InitialCreate', N'9.0.2');
+2025-03-27 19:03:38.610 +01:00 [INF] Applying migration '20250327180208_CreationTradingDate'.
+2025-03-27 19:03:38.639 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var sysname;
+SELECT @var = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Trades]') AND [c].[name] = N'TradeDate');
+IF @var IS NOT NULL EXEC(N'ALTER TABLE [Trades] DROP CONSTRAINT [' + @var + '];');
+ALTER TABLE [Trades] ALTER COLUMN [TradeDate] real NULL;
+2025-03-27 19:03:38.640 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [Trades] ADD [TradingDate] datetime2 NULL;
+2025-03-27 19:03:38.647 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var1 sysname;
+SELECT @var1 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'Trader');
+IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var1 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [Trader] nvarchar(50) NULL;
+2025-03-27 19:03:38.653 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var2 sysname;
+SELECT @var2 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'SourceListId');
+IF @var2 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var2 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [SourceListId] nvarchar(max) NULL;
+2025-03-27 19:03:38.660 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var3 sysname;
+SELECT @var3 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'Side');
+IF @var3 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var3 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [Side] nvarchar(max) NULL;
+2025-03-27 19:03:38.666 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var4 sysname;
+SELECT @var4 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'RevisionName');
+IF @var4 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var4 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [RevisionName] nvarchar(max) NULL;
+2025-03-27 19:03:38.673 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var5 sysname;
+SELECT @var5 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'RevisionDate');
+IF @var5 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var5 + '];');
+UPDATE [Bids] SET [RevisionDate] = '0001-01-01T00:00:00.0000000' WHERE [RevisionDate] IS NULL;
+ALTER TABLE [Bids] ALTER COLUMN [RevisionDate] datetime2 NOT NULL;
+ALTER TABLE [Bids] ADD DEFAULT '0001-01-01T00:00:00.0000000' FOR [RevisionDate];
+2025-03-27 19:03:38.679 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var6 sysname;
+SELECT @var6 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'DealType');
+IF @var6 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var6 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [DealType] nvarchar(max) NULL;
+2025-03-27 19:03:38.685 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var7 sysname;
+SELECT @var7 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'DealName');
+IF @var7 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var7 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [DealName] nvarchar(max) NULL;
+2025-03-27 19:03:38.691 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var8 sysname;
+SELECT @var8 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'CreationName');
+IF @var8 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var8 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [CreationName] nvarchar(max) NULL;
+2025-03-27 19:03:38.700 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var9 sysname;
+SELECT @var9 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'CreationDate');
+IF @var9 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var9 + '];');
+UPDATE [Bids] SET [CreationDate] = '0001-01-01T00:00:00.0000000' WHERE [CreationDate] IS NULL;
+ALTER TABLE [Bids] ALTER COLUMN [CreationDate] datetime2 NOT NULL;
+ALTER TABLE [Bids] ADD DEFAULT '0001-01-01T00:00:00.0000000' FOR [CreationDate];
+2025-03-27 19:03:38.706 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var10 sysname;
+SELECT @var10 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'Commentary');
+IF @var10 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var10 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [Commentary] nvarchar(max) NULL;
+2025-03-27 19:03:38.711 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var11 sysname;
+SELECT @var11 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'Book');
+IF @var11 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var11 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [Book] nvarchar(max) NULL;
+2025-03-27 19:03:38.718 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var12 sysname;
+SELECT @var12 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'BidStatus');
+IF @var12 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var12 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [BidStatus] nvarchar(50) NULL;
+2025-03-27 19:03:38.725 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var13 sysname;
+SELECT @var13 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'BidSecurity');
+IF @var13 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var13 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [BidSecurity] nvarchar(50) NULL;
+2025-03-27 19:03:38.733 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var14 sysname;
+SELECT @var14 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'BidListDate');
+IF @var14 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var14 + '];');
+UPDATE [Bids] SET [BidListDate] = '0001-01-01T00:00:00.0000000' WHERE [BidListDate] IS NULL;
+ALTER TABLE [Bids] ALTER COLUMN [BidListDate] datetime2 NOT NULL;
+ALTER TABLE [Bids] ADD DEFAULT '0001-01-01T00:00:00.0000000' FOR [BidListDate];
+2025-03-27 19:03:38.739 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var15 sysname;
+SELECT @var15 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Bids]') AND [c].[name] = N'Benchmark');
+IF @var15 IS NOT NULL EXEC(N'ALTER TABLE [Bids] DROP CONSTRAINT [' + @var15 + '];');
+ALTER TABLE [Bids] ALTER COLUMN [Benchmark] nvarchar(50) NULL;
+2025-03-27 19:03:38.739 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2025-03-27 19:03:38.740 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUsers] (
+    [Id] nvarchar(450) NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+);
+2025-03-27 19:03:38.741 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+2025-03-27 19:03:38.742 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] nvarchar(450) NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-03-27 19:03:38.743 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-03-27 19:03:38.744 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] nvarchar(450) NOT NULL,
+    [RoleId] nvarchar(450) NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-03-27 19:03:38.744 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] nvarchar(450) NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [AspNetUsers] ([Id]) ON DELETE CASCADE
+);
+2025-03-27 19:03:38.745 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+2025-03-27 19:03:38.745 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+2025-03-27 19:03:38.746 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+2025-03-27 19:03:38.746 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+2025-03-27 19:03:38.746 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+2025-03-27 19:03:38.746 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [AspNetUsers] ([NormalizedEmail]);
+2025-03-27 19:03:38.747 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+2025-03-27 19:03:38.747 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250327180208_CreationTradingDate', N'9.0.2');
+2025-03-27 19:03:38.748 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-03-27 19:05:04.878 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 19:05:04.899 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-27 19:05:04.906 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-03-27 19:05:04.938 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-03-27 19:05:04.942 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-03-27 19:05:04.942 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-03-27 19:05:04.944 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-03-27 19:05:04.948 +01:00 [INF] Applying migration '20250327180425_SuppressionTradeDate'.
+2025-03-27 19:05:04.965 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var sysname;
+SELECT @var = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Trades]') AND [c].[name] = N'TradeDate');
+IF @var IS NOT NULL EXEC(N'ALTER TABLE [Trades] DROP CONSTRAINT [' + @var + '];');
+ALTER TABLE [Trades] DROP COLUMN [TradeDate];
+2025-03-27 19:05:04.966 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250327180425_SuppressionTradeDate', N'9.0.2');
+2025-03-27 19:05:04.966 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
