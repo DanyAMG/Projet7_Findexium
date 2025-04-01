@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "d2a621f4-deed-43c3-82c5-cda7f8385a30",
+		"name": "Trade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36599730"
+	},
+	"item": [
+		{
+			"name": "Get All Trades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7210/api/Trades",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7210",
+					"path": [
+						"api",
+						"Trades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Trade By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7210/api/Trades/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7210",
+					"path": [
+						"api",
+						"Trades",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Trade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQxNzE0NzA5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MjEwIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIxMCJ9.2VVW-a5wP5yYFlSSEql0lAqKq3avlqUbJPJIaZOOMIg",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"Account\": \"Account123\",\r\n  \"AccountType\": \"TypeA\",\r\n  \"BuyQuantity\": 100,\r\n  \"SellQuantity\": 50,\r\n  \"BuyPrice\": 10.5,\r\n  \"SellPrice\": 12.5,\r\n  \"TradingDate\": \"2023-04-01T14:30:00\",\r\n  \"TradeSecurity\": \"SecurityABC\",\r\n  \"TradeStatus\": \"Active\",\r\n  \"Trader\": \"JohnDoe\",\r\n  \"Benchmark\": \"BenchmarkXYZ\",\r\n  \"Book\": \"Book1\",\r\n  \"CreationName\": \"Admin\",\r\n  \"CreationDate\": \"2023-04-01T12:00:00\",\r\n  \"RevisionName\": \"Revision1\",\r\n  \"RevisionDate\": \"2023-04-01T13:00:00\",\r\n  \"DealName\": \"Deal123\",\r\n  \"DealType\": \"Type1\",\r\n  \"SourceListId\": \"List123\",\r\n  \"Side\": \"Buy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7210/api/Trades",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7210",
+					"path": [
+						"api",
+						"Trades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Trade",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Account\": \"Account123\",\r\n  \"AccountType\": \"TypeA\",\r\n  \"BuyQuantity\": 100,\r\n  \"SellQuantity\": 50,\r\n  \"BuyPrice\": 10.5,\r\n  \"SellPrice\": 12.5,\r\n  \"TradingDate\": \"2023-04-01T14:30:00\",\r\n  \"TradeSecurity\": \"SecurityABC\",\r\n  \"TradeStatus\": \"Active\",\r\n  \"Trader\": \"JohnDoe\",\r\n  \"Benchmark\": \"BenchmarkXYZ\",\r\n  \"Book\": \"Book1\",\r\n  \"CreationName\": \"Admin\",\r\n  \"CreationDate\": \"2023-04-01T12:00:00\",\r\n  \"RevisionName\": \"Revision1\",\r\n  \"RevisionDate\": \"2023-04-01T13:00:00\",\r\n  \"DealName\": \"Deal123\",\r\n  \"DealType\": \"Type1\",\r\n  \"SourceListId\": \"List123\",\r\n  \"Side\": \"Buy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7210/api/Trades/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7210",
+					"path": [
+						"api",
+						"Trades",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Trade",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7210/api/Trades/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7210",
+					"path": [
+						"api",
+						"Trades",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJBZG1pbiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzQzNDYzMTM5LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MjEwIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzIxMCJ9.FXrS67kz58eQw9XRuO3E6RK4eJ0Ct5XuJ5GHWnJ9NI4",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
